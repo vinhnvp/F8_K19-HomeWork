@@ -1,0 +1,42 @@
+Index: BaiTapBuoi2/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Document</title>\n</head>\n<body>\n<section>\n<<<<<<< HEAD\n<<<<<<< HEAD\n    <h2>Code người A</h2>\n    <p>Đây là phần nội dung của người A.</p>\n</section>\n<section>\n    <h2>Code người B</h2>\n    <p>Đây là phần nội dung của người B.</p>\n</section>\n<section>\n    <h2>Code người C</h2>\n    <p>Đây là phần nội dung của người C.</p>\n</section>\n<section>\n    <h2>Code người D</h2>\n    <p>Đây là phần nội dung của người D.</p>\n</section>\n</body>\n</html>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/BaiTapBuoi2/index.html b/BaiTapBuoi2/index.html
+--- a/BaiTapBuoi2/index.html	(revision 609e0fefbd0f14881ce040e2183e023748b9b9ac)
++++ b/BaiTapBuoi2/index.html	(date 1770309580948)
+@@ -1,28 +1,11 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+-    <meta charset="UTF-8" />
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <meta charset="UTF-8"/>
++    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+     <title>Document</title>
+ </head>
+ <body>
+-<section>
+-<<<<<<< HEAD
+-<<<<<<< HEAD
+-    <h2>Code người A</h2>
+-    <p>Đây là phần nội dung của người A.</p>
+-</section>
+-<section>
+-    <h2>Code người B</h2>
+-    <p>Đây là phần nội dung của người B.</p>
+-</section>
+-<section>
+-    <h2>Code người C</h2>
+-    <p>Đây là phần nội dung của người C.</p>
+-</section>
+-<section>
+-    <h2>Code người D</h2>
+-    <p>Đây là phần nội dung của người D.</p>
+-</section>
++
+ </body>
+ </html>
