@@ -2,9 +2,136 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bài tập buổi 4 - Table</title>
 </head>
 <body>
+    <table width="100%" border="1" cellspacing="0" cellpadding="6">
+        <thead>
+            <tr>
+                <th rowspan="4">Nhánh SP</th>
+                <th rowspan="4">Epic</th>
+                <th colspan="8"><i>Năm 2025</i></th>
+                <th rowspan="4">SLA/SLO</th>
+                <th rowspan="4">Ghi chú</th>
+            </tr>
+            <tr>
+                <th colspan="4">H1</th>
+                <th colspan="4">H2</th>
+            </tr>
+            <tr>
+                <th colspan="2">T.01</th>
+                <th>T.02</th>
+                <th>T.03</th>
+                <th>T.07</th>
+                <th colspan="2">T.08</th>
+                <th>T.09</th>
+            </tr>
+            <tr>
+                <th>S<sub>1</sub></th>
+                <th>S<sub>2</sub></th>
+                <th>S<sub>3</sub></th>
+                <th>S<sub>4</sub></th>
+                <th>S<sub>1</sub></th>
+                <th>S<sub>2</sub></th>
+                <th>S<sub>3</sub></th>
+                <th>S<sub>4</sub></th>
+            </tr>
+        </thead>
 
+        <tbody>
+        <!--Block B2C-->
+        <tr>
+            <th rowspan="3"><b>B2C</b></th>
+            <th><b>Checkout 2.0</b></th>
+            <td><b>20</b></td>
+            <td>18</td>
+            <td>-</td>
+            <td>22</td>
+            <td>-</td>
+            <td colspan="2">30</td>
+            <td>15</td>
+            <td><b>99.<sup>9</sup>%</b></td>
+            <td>Target H2</td>
+        </tr>
+        <tr>
+            <th><b>Search <i>Relevance</i></b></th>
+            <td>10</td>
+            <td>15</td>
+            <td><b>18</b></td>
+            <td>-</td>
+            <td>12</td>
+            <td>12</td>
+            <td>-</td>
+            <td>14</td>
+            <td>0.<sup>1</sup>% EB</td>
+            <td>AB test</td>
+        </tr>
+        <tr>
+            <th><b>Gộp B2C</b></th>
+            <td colspan="8"><i>Tổng H1 + H2: </i><b>ổn định</b></td>
+            <td>-</td>
+            <td>OK</td>
+        </tr>
+
+        <!--Block B2B-->
+        <tr>
+            <th rowspan="3"><b>B2B</b></th>
+            <th><b>API Gateway</b></th>
+            <td>-</td>
+            <td>14</td>
+            <td>16</td>
+            <td>-</td>
+            <td>-</td>
+            <td>18</td>
+            <td>18</td>
+            <td><b>20</b></td>
+            <td>99.<sup>5</sup>%</td>
+            <td rowspan="2">Harden infra</td>
+        </tr>
+        <tr>
+            <th><b>Billing v1.<sup>3</sup>.<sub>5</sub></b></th>
+            <td colspan="4">Migrate v2</td>
+            <td>-</td>
+            <td>-</td>
+            <td>10</td>
+            <td>12</td>
+            <td>99.<sup>0</sup>%</td>
+        </tr>
+        <tr>
+            <th><b>Gộp B2B</b></th>
+            <td colspan="8"><i>Tổng H1 + H2: </i><b>tiến độ đạt</b></td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+
+        <!--Block Platform-->
+        <tr>
+            <th rowspan="2"><b>Platform</b></th>
+            <th><b>Observability</b></th>
+            <td colspan="5"><b>Agent & Dash</b></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td><b>99.<sup>95</sup>%</b></td>
+            <td>Rollout T.09</td>
+        </tr>
+        <tr>
+            <th><b>Security</b></th>
+            <td>Audit</td>
+            <td>-</td>
+            <td>-</td>
+            <td colspan="2">Hardening</td>
+            <td colspan="3"><i>IAM</i></td>
+            <td>99.<sup>9</sup>%</td>
+            <td>Chốt H2</td>
+        </tr>
+        </tbody>
+
+        <tfoot>
+            <th colspan="10">Tổng quan</th>
+            <th>OK</th>
+            <th>-</th>
+        </tfoot>
+    </table>
 </body>
 </html>
