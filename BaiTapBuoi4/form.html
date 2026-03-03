@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập buổi 4: Form</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data" action="https://api-gateway.f8.edu.vn/action_page.php">
+        <fieldset>
+            <legend><b>Thông tin cơ bản</b></legend>
+            <br>
+            <div>
+                <label for="fullname">Họ và tên</label>
+                <input name="fullname" id="fullname" placeholder="Nguyễn Văn A" autofocus required tabindex="1">
+            </div>
+            <br>
+            <div>
+                <label for="email">Email</label>
+                <input name="email" id="email" type="email" placeholder="example@gmail.com" required tabindex="2">
+            </div>
+            <br>
+            <div>
+                <label for="password">Mật khẩu</label>
+                <input name="password" id="password" type="password" minlength="6" autocomplete="off" required tabindex="3">
+            </div>
+            <br>
+            <div>
+                <label for="confirm_password">Nhập lại mật khẩu</label>
+                <input name="confirm_password" id="confirm_password" type="password" required tabindex="4">
+            </div>
+            <br>
+            <div>
+                <label for="tel">Số điện thoại</label>
+                <input name="tel" id="tel" type="tel" placeholder="0xxxxxxxxx" pattern="0[0-9]{9}" tabindex="5">
+            </div>
+            <br>
+            <div>
+                <label for="birthday">Ngày sinh</label>
+                <input name="birthday" id="birthday" type="date" required tabindex="6">
+            </div>
+            <br>
+            <div>
+                <label for="age">Tuổi</label>
+                <input name="age" id="age" type="number" min="1" max="120" tabindex="7">
+            </div>
+            <br>
+            <div>
+                <label for="website">Website cá nhân</label>
+                <input name="website" id="website" type="url" placeholder="https://..." tabindex="8">
+            </div>
+            <br>
+            <div>
+                <label for="address">Địa chỉ</label>
+                <input name="address" id="address" placeholder="Số nhà, đường, phường/xã" tabindex="9">
+            </div>
+            <br>
+            <div>
+                <label for="zipcode">Mã bưu chính</label>
+                <input name="zipcode" id="zipcode" placeholder="700000" maxlength="6" tabindex="10">
+            </div>
+            <br>
+
+            <!--Block mẫu-->
+            <div>
+                <label for=""></label>
+                <input name="" id="" type="" placeholder="" tabindex="">
+            </div>
+            <br>
+        </fieldset>
+        <div>
+            <button name="submit-btn" type="submit">Đăng ký ngay</button>
+            <button name="reset-btn" type="reset">Xóa toàn bộ dữ liệu</button>
+        </div>
+    </form>
+</body>
+</html>
