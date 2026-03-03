@@ -1,0 +1,251 @@
+Index: BaiTapBuoi4/bang2.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Bài tập buổi 4 - Bảng 2</title>\n</head>\n<body>\n    <table width=\"100%\" border=\"1\" cellspacing=\"0\" cellpadding=\"6\">\n        <thead>\n            <tr>\n                <th rowspan=\"4\">Khối</th>\n                <th rowspan=\"4\">Hạng mục</th>\n                <th rowspan=\"4\">Mã</th>\n                <th colspan=\"12\">Kế hoạch triển khai Năm 2026</th>\n                <th colspan=\"3\">Ngân sách</th>\n                <th rowspan=\"4\">Rủi ro</th>\n                <th rowspan=\"4\">Trạng thái</th>\n            </tr>\n            <tr>\n                <th colspan=\"6\">H1</th>\n                <th colspan=\"6\">H2</th>\n                <th rowspan=\"3\">CapEx</th>\n                <th rowspan=\"3\">OpEx</th>\n                <th rowspan=\"3\">Tổng</th>\n            </tr>\n            <tr>\n                <th>T.01</th>\n                <th>T.02</th>\n                <th>T.03</th>\n                <th>T.04</th>\n                <th>T.05</th>\n                <th>T.06</th>\n                <th>T.07</th>\n                <th>T.08</th>\n                <th>T.09</th>\n                <th>T.10</th>\n                <th>T.11</th>\n                <th>T.12</th>\n            </tr>\n        </thead>\n\n        <tbody>\n        <!--Block Giao thong-->\n        <tr>\n            <th rowspan=\"6\">Giao thông</th>\n            <th><b>Vé điện tử liên tuyến</b></th>\n            <th><b>GT-01</b></th>\n            <td>Khảo sát</td>\n            <td>Thiết kế</td>\n            <td>POC</td>\n            <td>Dev-1</td>\n            <td>Dev-2</td>\n            <td>UAT</td>\n            <td>Pilot</td>\n            <td>Mở rộng</td>\n            <td>-</td>\n            <td>Ổn định</td>\n            <td>Chuyển giao</td>\n            <td>Đánh giá</td>\n            <td>12</td>\n            <td>4</td>\n            <td>16</td>\n            <td>Trung</td>\n            <td>Đang làm</td>\n        </tr>\n        <tr>\n            <th><b>Camera phạt nguội AI</b></th>\n            <th><b>GT-02</b></th>\n            <td>Chuẩn dữ liệu</td>\n            <td>-</td>\n            <td>Đấu thầu</td>\n            <td>Lắp đặt</td>\n            <td>Huấn luyện</td>\n            <td>UAT</td>\n            <td>Go-live</td>\n            <td>-</td>\n            <td>Tối ưu</td>\n            <td>-</td>\n            <td>Mở rộng</td>\n            <td>Kiểm toán</td>\n            <td>18</td>\n            <td>6</td>\n            <td>24</td>\n            <td>Cao</td>\n            <td>Phụ thuộc</td>\n        </tr>\n        <tr>\n            <th><b>Trung tâm điều hành</b></th>\n            <th><b>GT-03</b></th>\n            <td colspan=\"2\">Kiến trúc</td>\n            <td>Thiết bị</td>\n            <td>-</td>\n            <td>Setup</td>\n            <td>Tích hợp</td>\n            <td>Vận hành</td>\n            <td>-</td>\n            <td>-</td>\n            <td>BCP</td>\n            <td>Diễn tập</td>\n            <td>Nghiệm thu</td>\n            <td>30</td>\n            <td>10</td>\n            <td>40</td>\n            <td>Cao</td>\n            <td>Chờ phê duyệt</td>\n        </tr>\n        <tr>\n            <th rowspan=\"2\"><b>Bảo trì đường bộ</b></th>\n            <th><b>GT-04A</b></th>\n            <td>Khảo sát</td>\n            <td>-</td>\n            <td>-</td>\n            <td colspan=\"2\">Sửa chữa</td>\n            <td>-</td>\n            <td>-</td>\n            <td>-</td>\n            <td>Bảo trì</td>\n            <td>-</td>\n            <td>-</td>\n            <td>Kiểm tra</td>\n            <td>8</td>\n            <td>7</td>\n            <td>15</td>\n            <td>Thấp</td>\n            <td>Đúng tiến độ</td>\n        </tr>\n        <tr>\n            <th><b>GT-04B</b></th>\n            <td>-</td>\n            <td>-</td>\n            <td>Giám sát</td>\n            <td>-</td>\n            <td>-</td>\n            <td>-</td>\n            <td colspan=\"3\">Bảo tri định kỳ̀</td>\n            <td colspan=\"3\">Tăng cường Q4</td>\n            <td>2</td>\n            <td>9</td>\n            <td>11</td>\n            <td>Trung</td>\n            <td>Đang làm</td>\n        </tr>\n\n        <!--Block An toan du lieu-->\n        <tr>\n            <th rowspan=\"7\"><b>Y tế</b></th>\n            <th>Hồ sơ sức khỏe điện tử</th>\n            <th>YT-01</th>\n            <td>Chuẩn HL7</td>\n            <td>-</td>\n            <td>Thiết kế</td>\n            <td>Dev-1</td>\n            <td>Dev-2</td>\n            <td>UAT</td>\n            <td>Pilot</td>\n            <td>-</td>\n            <td>Mở rộng</td>\n            <td>Tối ưu</td>\n            <td>-</td>\n            <td>Đánh giá</td>\n            <td>14</td>\n            <td>9</td>\n            <td>23</td>\n            <td>Trung</td>\n            <td>Đang làm</td>\n        </tr>\n        <tr>\n            <th rowspan=\"2\">An toàn dữ liệu</th>\n            <th>YT-04A</th>\n            <td colspan=\"3\">Đánh giá rò rỉ</td>\n            <td colspan=\"3\">Mã hóa & phân quyền</td>\n            <td colspan=\"3\">Giám sát truy cập</td>\n            <td colspan=\"3\">Kiểm toán độc lập</td>\n            <td>4</td>\n            <td>3</td>\n            <td>7</td>\n            <td>Cao</td>\n            <td>Đang làm</td>\n        </tr>\n        <tr>\n            <th>Chuyển đổi HIS</th>\n            <th>YT-05</th>\n            <td colspan=\"2\">Rà soát</td>\n            <td>Đấu thầu</td>\n            <td>Triển khai</td>\n            <td>-</td>\n            <td>Tích hợp</td>\n            <td>UAT</td>\n            <td>Go-live</td>\n            <td>-</td>\n            <td>Ổn định</td>\n            <td>-</td>\n            <td>Nghiệm thu</td>\n            <td>20</td>\n            <td>12</td>\n            <td>32</td>\n            <td>Cao</td>\n            <td>Chờ phê duyệt</td>\n        </tr>\n        <tr>\n            <th>Tổng hợp Y tế</th>\n            <th>YT-SUM</th>\n            <td colspan=\"12\">Ưu tiên liên thông dữ liệu & an toàn; theo dõi KPI: thời gian chờ, tỷ lệ đặt lịch thành công, sự cố bảo mật</td>\n            <td colspan=\"3\">Tổng 92</td>\n            <td>-</td>\n            <td>OK</td>\n        </tr>\n        </tbody>\n    </table>\n</body>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/BaiTapBuoi4/bang2.html b/BaiTapBuoi4/bang2.html
+--- a/BaiTapBuoi4/bang2.html	(revision 135f0f6ffec66b19cc6a5aeb8d1719d0a725132a)
++++ b/BaiTapBuoi4/bang2.html	(date 1772480236478)
+@@ -165,6 +165,8 @@
+             <td>Trung</td>
+             <td>Đang làm</td>
+         </tr>
++
++        <!--Block an toan du lieu-->
+         <tr>
+             <th rowspan="2">An toàn dữ liệu</th>
+             <th>YT-04A</th>
+@@ -198,6 +200,8 @@
+             <td>Cao</td>
+             <td>Chờ phê duyệt</td>
+         </tr>
++
++        <!--Block tong hop y te-->
+         <tr>
+             <th>Tổng hợp Y tế</th>
+             <th>YT-SUM</th>
+@@ -206,6 +210,27 @@
+             <td>-</td>
+             <td>OK</td>
+         </tr>
++
++        <tr>
++            <th>Giáo dục</th>
++            <th>LMS cho THPT</th>
++            <td>Rà soát</td>
++            <td>Đấu thầu</td>
++            <td>Triển khai</td>
++            <td>-</td>
++            <td>Tích hợp</td>
++            <td>UAT</td>
++            <td>Go-live</td>
++            <td>-</td>
++            <td>Ổn định</td>
++            <td>-</td>
++            <td>Nghiệm thu</td>
++            <td>20</td>
++            <td>12</td>
++            <td>32</td>
++            <td>Cao</td>
++            <td>Chờ phê duyệt</td>
++        </tr>
+         </tbody>
+     </table>
+ </body>
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2_5_26,_11_42 PM_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_2_5_26,_11_42 PM_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_2_5_26,_11_42 PM_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_2_5_26,_11_42 PM_[Changes]/shelved.patch	(revision 135f0f6ffec66b19cc6a5aeb8d1719d0a725132a)
++++ /dev/null	(revision 135f0f6ffec66b19cc6a5aeb8d1719d0a725132a)
+@@ -1,42 +0,0 @@
+-Index: BaiTapBuoi2/index.html
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Document</title>\n</head>\n<body>\n<section>\n<<<<<<< HEAD\n<<<<<<< HEAD\n    <h2>Code người A</h2>\n    <p>Đây là phần nội dung của người A.</p>\n</section>\n<section>\n    <h2>Code người B</h2>\n    <p>Đây là phần nội dung của người B.</p>\n</section>\n<section>\n    <h2>Code người C</h2>\n    <p>Đây là phần nội dung của người C.</p>\n</section>\n<section>\n    <h2>Code người D</h2>\n    <p>Đây là phần nội dung của người D.</p>\n</section>\n</body>\n</html>\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/BaiTapBuoi2/index.html b/BaiTapBuoi2/index.html
+---- a/BaiTapBuoi2/index.html	(revision 609e0fefbd0f14881ce040e2183e023748b9b9ac)
+-+++ b/BaiTapBuoi2/index.html	(date 1770309580948)
+-@@ -1,28 +1,11 @@
+- <!DOCTYPE html>
+- <html lang="en">
+- <head>
+--    <meta charset="UTF-8" />
+--    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+-+    <meta charset="UTF-8"/>
+-+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+-     <title>Document</title>
+- </head>
+- <body>
+--<section>
+--<<<<<<< HEAD
+--<<<<<<< HEAD
+--    <h2>Code người A</h2>
+--    <p>Đây là phần nội dung của người A.</p>
+--</section>
+--<section>
+--    <h2>Code người B</h2>
+--    <p>Đây là phần nội dung của người B.</p>
+--</section>
+--<section>
+--    <h2>Code người C</h2>
+--    <p>Đây là phần nội dung của người C.</p>
+--</section>
+--<section>
+--    <h2>Code người D</h2>
+--    <p>Đây là phần nội dung của người D.</p>
+--</section>
+-+
+- </body>
+- </html>
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2_5_26__11_42PM__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_2_5_26__11_42PM__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_2_5_26__11_42PM__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_2_5_26__11_42PM__Changes_.xml	(revision 135f0f6ffec66b19cc6a5aeb8d1719d0a725132a)
++++ /dev/null	(revision 135f0f6ffec66b19cc6a5aeb8d1719d0a725132a)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_2_5_26,_11_42 PM_[Changes]" date="1770309756045" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_5_26,_11_42 PM_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2/5/26, 11:42 PM [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"VcsDirectoryMappings\">\n    <mapping directory=\"$PROJECT_DIR$\" vcs=\"Git\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+--- a/.idea/vcs.xml	(revision 135f0f6ffec66b19cc6a5aeb8d1719d0a725132a)
++++ b/.idea/vcs.xml	(date 1772474116626)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++    <mapping directory="" vcs="Git" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"fc84eb6c-0f44-4fdd-a446-5b279962d721\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/index.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"HTML File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;vinhnvp&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/vinhnvp/F8_K19-HomeWork.git&quot;,\n    &quot;accountId&quot;: &quot;3fdbbb23-7b41-42e9-9106-4358b6139bbd&quot;\n  }\n}</component>\n  <component name=\"McpProjectServerCommands\">\n    <commands />\n    <urls />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 0\n}</component>\n  <component name=\"ProjectId\" id=\"39ASYgtOlJIZz7DPilju3xvlFaW\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,\n    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,\n    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\n    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/home/vinh/IdeaProjects&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\n    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,\n    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/BaiTapBuoi3\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\n      <module name=\"F8_K19-HomeWork\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\n      <module name=\"F8_K19-HomeWork\" />\n      <option name=\"filePath\" />\n      <method v=\"2\" />\n    </configuration>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90\" />\n        <option value=\"bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.30387.90\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"fc84eb6c-0f44-4fdd-a446-5b279962d721\" name=\"Changes\" comment=\"\" />\n      <created>1770137431965</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1770137431965</updated>\n      <workItem from=\"1770137433472\" duration=\"1256000\" />\n      <workItem from=\"1770294115811\" duration=\"4644000\" />\n      <workItem from=\"1770309228704\" duration=\"476000\" />\n      <workItem from=\"1770309738456\" duration=\"7460000\" />\n      <workItem from=\"1770348548133\" duration=\"3148000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 135f0f6ffec66b19cc6a5aeb8d1719d0a725132a)
++++ b/.idea/workspace.xml	(date 1772480258395)
+@@ -5,8 +5,11 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="fc84eb6c-0f44-4fdd-a446-5b279962d721" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_5_26,_11_42 PM_[Changes]/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_5_26__11_42PM__Changes_.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/BaiTapBuoi4/bang2.html" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi4/bang2.html" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -47,55 +50,42 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;/home/vinh/IdeaProjects&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "DefaultHtmlFileTemplate": "HTML File",
++    "ModuleVcsDetector.initialDetectionPerformed": "true",
++    "RunOnceActivity.MCP Project settings loaded": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
++    "RunOnceActivity.git.unshallow": "true",
++    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
++    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
++    "git-widget-placeholder": "main",
++    "junie.onboarding.icon.badge.shown": "true",
++    "kotlin-language-version-configured": "true",
++    "last_opened_file_path": "/home/vinh/IdeaProjects",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "project.structure.last.edited": "Project",
++    "project.structure.proportion": "0.0",
++    "project.structure.side.proportion": "0.0",
++    "to.speed.mode.migration.done": "true",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/BaiTapBuoi3" />
+     </key>
+   </component>
+-  <component name="RunManager">
+-    <configuration default="true" type="JetRunConfigurationType">
+-      <module name="F8_K19-HomeWork" />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+-      <module name="F8_K19-HomeWork" />
+-      <option name="filePath" />
+-      <method v="2" />
+-    </configuration>
+-  </component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+-        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.30387.90" />
++        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
++        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.31033.145" />
+       </set>
+     </attachedChunks>
+   </component>
+@@ -111,6 +101,8 @@
+       <workItem from="1770309228704" duration="476000" />
+       <workItem from="1770309738456" duration="7460000" />
+       <workItem from="1770348548133" duration="3148000" />
++      <workItem from="1772473488932" duration="583000" />
++      <workItem from="1772474081638" duration="6176000" />
+     </task>
+     <servers />
+   </component>
