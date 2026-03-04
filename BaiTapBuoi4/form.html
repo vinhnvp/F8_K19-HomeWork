@@ -8,7 +8,7 @@
     <form method="post" enctype="multipart/form-data" action="https://api-gateway.f8.edu.vn/action_page.php">
         <!--Nhóm 1: Thông tin cơ bản-->
         <fieldset>
-            <legend><b>Thông tin cơ bản</b></legend>
+            <legend><b>Nhóm 1: Thông tin cơ bản</b></legend>
             <table cellpadding="12">
                 <tr>
                     <td>
@@ -32,8 +32,8 @@
                 </tr>
                 <tr>
                     <td>
-                        <label for="tel">Số điện thoại</label><br>
-                        <input name="tel" id="tel" type="tel" placeholder="0xxxxxxxxx" pattern="0[0-9]{9}" tabindex="5">
+                        <label for="phone">Số điện thoại</label><br>
+                        <input name="phone" id="phone" type="tel" placeholder="0xxxxxxxxx" pattern="0[0-9]{9}" tabindex="5">
                     </td>
                     <td>
                         <label for="birthday">Ngày sinh</label><br>
@@ -66,7 +66,7 @@
 
         <!--Nhóm 2: Thông tin bổ sung-->
         <fieldset>
-            <legend><b>Thông tin bổ sung</b></legend>
+            <legend><b>Nhóm 2: Thông tin bổ sung</b></legend>
             <div>
                 <label>Giới tính:</label>
                 <input name="gender" id="gender-nam" type="radio" value="nam" required tabindex="11">
@@ -129,24 +129,24 @@
             <br>
             <div>
                 <label>Khóa học quan tâm:</label>
-                <input name="course[]" id="course" type="checkbox" value="html-css" tabindex="23">
-                <label>HTML-CSS</label>
-                <input name="course[]" id="course" type="checkbox" value="javascript" tabindex="24">
-                <label>Javascript</label>
-                <input name="course[]" id="course" type="checkbox" value="reactJS" tabindex="25">
-                <label>ReactJS</label>
-                <input name="course[]" id="course" type="checkbox" value="nodeJS" tabindex="26">
-                <label>NodeJS</label>
-                <input name="course[]" id="course" type="checkbox" value="python" tabindex="27">
-                <label>Python</label>
+                <input name="course[]" id="course_html-css" type="checkbox" value="html-css" tabindex="23">
+                <label for="course_html-css">HTML-CSS</label>
+                <input name="course[]" id="course_js" type="checkbox" value="javascript" tabindex="24">
+                <label for="course_js">Javascript</label>
+                <input name="course[]" id="course_reactjs" type="checkbox" value="reactJS" tabindex="25">
+                <label for="course_reactjs">ReactJS</label>
+                <input name="course[]" id="course_nodejs" type="checkbox" value="nodeJS" tabindex="26">
+                <label for="course_nodejs">NodeJS</label>
+                <input name="course[]" id="course_python" type="checkbox" value="python" tabindex="27">
+                <label for="course_python">Python</label>
             </div>
             <br>
             <div>
                 <label>Hình thức học:</label>
-                <input name="study_type" id="study_type" type="radio" value="online" tabindex="28">
-                <label>Online</label>
-                <input name="study_type" id="study_type" type="radio" value="offline" tabindex="29">
-                <label>Offline</label>
+                <input name="study_type" id="study_type_online" type="radio" value="online" tabindex="28">
+                <label for="study_type_online">Online</label>
+                <input name="study_type" id="study_type_offline" type="radio" value="offline" tabindex="29">
+                <label for="study_type_offline">Offline</label>
             </div>
             <br>
             <div>
@@ -168,7 +168,7 @@
 
         <!--Nhóm 3: Input đặc biệt-->
         <fieldset>
-            <legend><b>Input đặc biệt</b></legend>
+            <legend><b>Nhóm 3: Input đặc biệt</b></legend>
             <div>
                 <label for="fav_color">Màu yêu thích:</label>
                 <input name="fav_color" id="fav_color" type="color" value="#ff6600" tabindex="33">
@@ -217,6 +217,56 @@
             <div>
                 <label for="fav_lang">Ngôn ngữ lập trình yêu thích:</label>
                 <input name="fav_lang" id="fav_lang" placeholder="VD: JavaScript, Python..." tabindex="41">
+            </div>
+        </fieldset>
+        <br>
+
+        <!--Nhóm 4: Xác nhận - điều khoản-->
+        <fieldset>
+            <legend><b>Nhóm 4: Xác nhận & điều khoản</b></legend>
+            <div>
+                <input name="agree_terms" id="agree_terms" type="checkbox" tabindex="42">
+                <label for="agree_terms">Tôi đồng ý với điều khoản sử dụng</label>
+            </div>
+            <br>
+            <div>
+                <input name="subscribe" id="subscribe" type="checkbox" tabindex="43">
+                <label for="subscribe">Nhận thông báo qua email</label>
+            </div>
+            <br>
+            <div>
+                <input name="sms_notify" id="sms_notify" type="checkbox" tabindex="44">
+                <label for="sms_notify">Nhận thông báo qua SMS</label>
+            </div>
+            <br>
+            <div>
+                <label for="ref_code">Mã giới thiệu</label>
+                <input name="ref_code" id="ref_code" placeholder="Nhập mã nếu có" tabindex="45">
+            </div>
+            <br>
+            <div>
+                <label>Mã khóa học (ẩn)</label>
+                <input name="course_id" id="course_id" type="hidden" value="F8_2024" tabindex="46">
+            </div>
+            <br>
+            <div>
+                <label>Nguồn truy cập (ẩn)</label>
+                <input name="utm_source" id="utm_source" type="hidden" value="website" tabindex="47">
+            </div>
+        </fieldset>
+        <br>
+
+        <!--Disabled và Readonly-->
+        <fieldset>
+            <legend><b>Readonly và Disabled</b></legend>
+            <div>
+                <p><b>Readonly</b>: Dùng readonly vì cho dữ liệu không được sửa nhưng vẫn cần gửi lên server.</p>
+                <label for="user_id">Mã số học viên (Readonly):</label>
+                <input type="text" id="user_id" name="user_id" value="F8-K19-2026" readonly tabindex="48">
+
+                <p><b>Disabled</b>: không cho user tác động vào input và cũng không gửi value lên server, khác với Readonly vẫn gửi dữ liệu.</p>
+                <label for="status">Trạng thái tài khoản (Disabled):</label>
+                <input type="text" id="status" name="status" value="Chưa kích hoạt" disabled tabindex="49">
             </div>
         </fieldset>
 
