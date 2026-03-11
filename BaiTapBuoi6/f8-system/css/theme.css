@@ -9,3 +9,23 @@ h2 {
 #special {
     color: #FFFF00; /* Yellow */
 }
+
+/* Students Page | Sử dụng cùng lúc selector: tag + class */
+p.highlight {
+    color: red;
+}
+
+/* Teachers Page | Sử dụng cùng lúc selector: tag + class + id */
+h2.title#special {
+    color: brown;
+}
+
+/* Reports Page | Áp dụng selector class + id cùng lúc */
+.section#main {
+    background-color: black;
+}
+
+/* Reports Page | Áp dụng selector: p tag + class cùng lúc */
+p.title {
+    color: white;
+}

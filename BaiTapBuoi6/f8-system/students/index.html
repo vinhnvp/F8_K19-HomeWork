@@ -9,14 +9,13 @@
     <link rel="stylesheet" href="../css/theme.css">
     <title>Students Page</title>
     <style>
-        <!--Sử dụng cùng lúc tag + class selector-->
-        p.highlight {
-             color: red;
+        #name_01 {
+            color: yellow
         }
     </style>
 </head>
 <body>
-    <h1 id="main">STUDENTS PAGE</h1>
+    <h1 id="main" style="font-size: 40px">STUDENTS PAGE</h1>
     <h2 class="title">Danh sach hoc vien</h2>
     <h3 class="title">Nhom 1:</h3>
         <p class="highlight">Nguyen Van A</p>
@@ -24,6 +23,11 @@
     <h3 class="title">Nhom 2:</h3>
         <p class="highlight">Le Van C</p>
         <p class="highlight">Pham Van D</p>
-        <p class="big">Nguyen Vo Phuc Vinh</p>
+        <p class="big" id="name_01" style="color: lime">Nguyen Vo Phuc Vinh</p>
+        <!--
+            Phần tử p cuối có đủ: tag(p) + class(.big) + id(#name_01) + inline style
+            Selector thắng: inline style, vì inline style mạnh nhất (điểm cao nhất)
+            Màu hiển thị: lime
+        -->
 </body>
 </html>
