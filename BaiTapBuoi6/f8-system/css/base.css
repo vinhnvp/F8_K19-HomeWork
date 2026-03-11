@@ -1,30 +1,39 @@
 h1 {
-
+    color: #FF0000; /* Red */
 }
+
 h2 {
-
+    color: #00FF00; /* Lime */
 }
+
 h3 {
-
+    color: #0000FF; /* Blue */
 }
+
 p {
-
+    color: #FF00FF; /* Magenta */
 }
+
 .title {
-
+    color: #FF8C00; /* Orange */
 }
+
 .section {
-
+    color: #00FFFF; /* Cyan */
 }
+
 .highlight {
-
+    color: #800080; /* Purple */
 }
+
 .big {
-
+    color: #006400; /* Dark Green */
 }
+
 #main {
-
+    color: #FF69B4; /* Pink */
 }
-#special {
 
+#special {
+    color: #8B4513; /* Saddle Brown */
 }

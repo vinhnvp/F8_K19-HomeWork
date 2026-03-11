@@ -1,9 +1,11 @@
 .title {
-
+    color: #708090; /* Gray */
 }
+
 h2 {
-
+    color: #FFD700; /* Gold */
 }
-#special {
 
+#special {
+    color: #FFFF00; /* Yellow */
 }
