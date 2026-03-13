@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form UI (HTML/CSS)</title>
+    <style>
+        h2 {
+            font-size: 24px;
+            color: #f9fafb;
+            background-color: #f98000
+        }
+        form {
+            background-color: #f9fafb;
+            color: #111827
+        }
+        .groupTitle {
+            color: #111827
+        }
+        label {
+            background-color: #eef2ff;
+            color: #4b5563
+        }
+        .contentArea {
+            background-color: #f3f4f6;
+            color: #111827
+        }
+        .contentDefault {
+            background-color: #ffffff;
+            color: #9ca3af;
+        }
+
+
+        /* --- CSS Theme field --- */
+
+        #theme--light:checked ~ #theme--light_label {
+            background-color: #fff8cc;
+            color: #8b5e00
+        }
+        #theme--light:checked ~ .contentArea > #theme--light_content {
+            background-color: #fff8cc;
+            color: #111827
+        }
+        #theme--dark:checked ~ #theme--dark_label {
+            background-color: #111827;
+            color: #f9fafb
+        }
+        #theme--dark:checked ~ .contentArea > #theme--dark_content {
+            background-color: #111827;
+            color: #f9fafb
+        }
+
+
+        /* --- CSS Colors field --- */
+
+        #color--red:checked ~ #color--red_label {
+            background-color: #fee2e2;
+            color: #991b1b
+        }
+        #color--red:checked ~ .contentArea > #color--red_content {
+            background-color: #fee2e2;
+            color: #7f1d1d
+        }
+        #color--blue:checked ~ #color--blue_label {
+            background-color: #dbeafe;
+            color: #1d4ed8
+        }
+        #color--blue:checked ~ .contentArea > #color--blue_content {
+            background-color: #dbeafe;
+            color: #1d4ed8
+        }
+        #color--green:checked ~ #color--green_label {
+            background-color: #dcfce7;
+            color: #166534
+        }
+        #color--green:checked ~ .contentArea > #color--green_content {
+            background-color: #dcfce7;
+            color: #166534
+        }
+
+
+        /* --- CSS Languages field --- */
+
+        #lang-vi:checked ~ #lang-vi_label {
+            background-color: #bbf7d0;
+            color: #166534
+        }
+        #lang-vi:checked ~ .contentArea > #lang-vi_content {
+            color: #166534
+        }
+        #lang-en:checked ~ #lang-en_label {
+            background-color: #bfdbfe;
+            color: #1d4ed8
+        }
+        #lang-en:checked ~ .contentArea > #lang-en_content {
+            color: #1d4ed8
+        }
+
+
+        /* --- CSS Options field --- */
+
+        #opt--advanced:checked ~ #opt--advanced_label {
+            background-color: #fef3c7;
+            color: #92400e
+        }
+        #opt--advanced:checked ~ .contentArea > #opt--advanced_content {
+            background-color: #fef3c7;
+            color: #92400e
+        }
+        #opt--eco:checked ~ #opt--eco_label {
+            background-color: #bbf7d0;
+            color: #15803d
+        }
+        #opt--eco:checked ~ .contentArea > #opt--eco_content {
+            background-color: #bbf7d0;
+            color: #166534
+        }
+        #opt--warning:checked ~ #opt--warning_label {
+            background-color: #fee2e2;
+            color: #b91c1c
+        }
+        #opt--warning:checked ~ .contentArea > #opt--warning_content {
+            background-color: #fee2e2;
+            color: #b91c1c
+        }
+
+
+    </style>
+</head>
+<body>
+    <form>
+        <!--Giả định form này là một phần nhỏ trong một trang nhiều nội dung nên không dùng h1 ở đây-->
+        <h2>Trung tâm cấu hình giao diện</h2>
+
+        <!--Theme field-->
+        <p class="groupTitle">Chọn giao diện (Theme):</p>
+        <input type="radio" name="theme" id="theme--light" checked="checked">
+        <label for="theme--light" id="theme--light_label">Light</label>
+        <input type="radio" name="theme" id="theme--dark">
+        <label for="theme--dark" id="theme--dark_label">Dark</label>
+
+        <!--Colors field-->
+        <p class="groupTitle">Chọn màu chủ đạo (Color):</p>
+        <input type="radio" name="color" id="color--red" checked="checked">
+        <label for="color--red" id="color--red_label">Red</label>
+        <input type="radio" name="color" id="color--blue">
+        <label for="color--blue" id="color--blue_label">Blue</label>
+        <input type="radio" name="color" id="color--green">
+        <label for="color--green" id="color--green_label">Green</label>
+
+        <!--Languages field-->
+        <p class="groupTitle">Chọn ngôn ngữ (Language):</p>
+        <input type="radio" name="lang" id="lang-vi" checked="checked">
+        <label for="lang-vi" id="lang-vi_label">VI</label>
+        <input type="radio" name="lang" id="lang-en">
+        <label for="lang-en" id="lang-en_label">EN</label>
+
+        <!--Options - Checkbox-->
+        <p class="groupTitle">Tùy chọn bổ sung (Options - Checkbox):</p>
+        <input type="checkbox" name="more_options[]" id="opt--advanced">
+        <label for="opt--advanced" id="opt--advanced_label">Hiển thị mô tả nâng cao</label>
+        <input type="checkbox" name="more_options[]" id="opt--eco">
+        <label for="opt--eco" id="opt--eco_label">Bật chế độ Eco</label>
+        <input type="checkbox" name="more_options[]" id="opt--warning">
+        <label for="opt--warning" id="opt--warning_label">Hiển thị cảnh báo quan trọng</label>
+
+        <!--3 field radiobox trên, set attribute checked ở mỗi radio đầu tiên để đảm bảo
+        chúng là tùy chọn mặc định mỗi khi reload (F5) trước khi người dùng có sự thay đổi. -->
+
+        <div class="contentArea">
+            <p class="contentDefault" id="theme--light_content">Theme Light: Giao diện sáng, chữ đen.</p>
+            <p class="contentDefault" id="theme--dark_content">Theme Dark: Giao diện tối, chữ sáng.</p>
+            <p class="contentDefault" id="color--red_content">Màu Red: Được nhấn mạnh khi chọn Red.</p>
+            <p class="contentDefault" id="color--blue_content">Màu Blue: Được nhấn mạnh khi chọn Blue.</p>
+            <p class="contentDefault" id="color--green_content">Màu Green: Được nhấn mạnh khi chọn Green.</p>
+            <p class="contentDefault" id="lang-vi_content">[VI] Xin chào bạn! Khi chọn VI, dòng này rõ hơn.</p>
+            <p class="contentDefault" id="lang-en_content">[EN] Hello world! Khi chọn EN, dòng này rõ hơn.</p>
+            <p class="contentDefault" id="opt--advanced_content">Mô tả nâng cao: giải thích kỹ hơn về cách các lựa chọn đang ảnh hưởng giao diện.</p>
+            <p class="contentDefault" id="opt--eco_content">Chế độ Eco: mô phỏng trạng thái tiết kiệm tài nguyên cho giao diện.</p>
+            <p class="contentDefault" id="opt--warning_content">Cảnh báo quan trọng: khu vực dùng để nhấn mạnh thông tin hệ thống.</p>
+        </div>
+
+        <!--Reset Button (add for faster checking)-->
+        <div>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+</html>
