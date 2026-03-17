@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile Form</title>
+    <style>
+        html {
+            font-size: 1em;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        .main_container {
+            width: 100vw;
+            min-height: 100vh;
+            background-color: #eee;
+            box-sizing: border-box;
+        }
+        .control_panel,
+        .preview_area {
+            border: none;
+            height: calc(100vh - 40px);
+            display: inline-block;
+            box-sizing: border-box;
+            vertical-align: top;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+
+        .control_panel {
+            width: 25%;
+            background-color: #f5f5f5;
+            margin-left: 10px;
+            margin-right: 5px;
+            padding: 24px;
+        }
+        .preview_area {
+            width: calc(100vw - 25% - 35px);
+            background-color: #f5f5f5;
+            margin-left: 5px;
+            margin-right: 10px;
+            padding: 24px;
+        }
+        .option-title {
+            margin-top: 24px;
+        }
+        label {
+            font-size: 0.9rem;
+            padding: 0.5em 1em;
+            margin: 0 0.2em;
+            background: #ddd;
+            cursor: pointer;
+            user-select: none;
+        }
+
+
+    /* 1. Change Background Theme */
+        #background_theme--light:checked ~ #background_theme--light-label,
+        #background_theme--gray:checked ~ #background_theme--gray-label,
+        #background_theme--yellow:checked ~ #background_theme--yellow-label,
+        #background_theme--blue:checked ~ #background_theme--blue-label,
+        #background_theme--pink:checked ~ #background_theme--pink-label {
+            font-weight: bold
+        }
+        .control_panel:has(#background_theme--light:checked) ~ .preview_area {
+            background-color: white
+        }
+        .control_panel:has(#background_theme--gray:checked) ~ .preview_area {
+            background-color: lightgray
+        }
+        .control_panel:has(#background_theme--yellow:checked) ~ .preview_area {
+            background-color: lightyellow
+        }
+        .control_panel:has(#background_theme--blue:checked) ~ .preview_area {
+            background-color: lightblue
+        }
+        .control_panel:has(#background_theme--pink:checked) ~ .preview_area {
+            background-color: pink
+        }
+
+    /* 2. Change Name Size */
+        #name_size--s:checked ~ #name_size--s-label,
+        #name_size--m:checked ~ #name_size--m-label,
+        #name_size--l:checked ~ #name_size--l-label {
+            font-weight: bold;
+        }
+        .control_panel:has(#name_size--s:checked) ~ .preview_area .full_name {
+            font-size: 2rem
+        }
+        .control_panel:has(#name_size--m:checked) ~ .preview_area .full_name {
+            font-size: 2.4rem
+        }
+        .control_panel:has(#name_size--l:checked) ~ .preview_area .full_name {
+            font-size: 2.75rem
+        }
+
+    /* 3. Change Name Text Style */
+        #name_style--normal:checked ~ #name_style--normal-label,
+        #name_style--uppercase:checked ~ #name_style--uppercase-label {
+            font-weight: bold;
+        }
+        .control_panel:has(#name_style--normal:checked) ~ .preview_area .full_name {
+            text-transform: normal
+        }
+        .control_panel:has(#name_style--uppercase:checked) ~ .preview_area .full_name {
+            text-transform: uppercase
+        }
+
+    /* 4. Change name color */
+        #name_color--dark:checked ~ #name_color--dark-label,
+        #name_color--blue:checked ~ #name_color--blue-label,
+        #name_color--green:checked ~ #name_color--green-label,
+        #name_color--red:checked ~ #name_color--red-label {
+            font-weight:bold
+        }
+        .control_panel:has(#name_color--dark:checked:checked) ~ .preview_area .full_name {
+            color: black
+        }
+        .control_panel:has(#name_color--blue:checked:checked) ~ .preview_area .full_name {
+            color: blue
+        }
+        .control_panel:has(#name_color--green:checked:checked) ~ .preview_area .full_name {
+            color: green
+        }
+        .control_panel:has(#name_color--red:checked:checked) ~ .preview_area .full_name {
+            color: red
+        }
+
+    /* 5. Change align options */
+        #align_options--left:checked ~ #align_options--left-label,
+        #align_options--center:checked ~ #align_options--center-label,
+        #align_options--right:checked ~ #align_options--right-label {
+            font-weight: bold
+        }
+        .control_panel:has(#align_options--left:checked) ~ .preview_area {
+            text-align: left;
+            vertical-align: left;
+        }
+        .control_panel:has(#align_options--center:checked) ~ .preview_area {
+            text-align: center;
+            vertical-align: center;
+        }
+        .control_panel:has(#align_options--right:checked) ~ .preview_area {
+            text-align: right;
+            vertical-align: right;
+        }
+
+    /* 6. Change occupation size */
+        #occupation_size--s:checked ~ #occupation_size--s-label,
+        #occupation_size--m:checked ~ #occupation_size--m-label,
+        #occupation_size--l:checked ~ #occupation_size--l-label {
+            font-weight: bold
+        }
+        .control_panel:has(#occupation_size--s:checked) ~ .preview_area .occupation {
+            font-size: 0.9rem
+        }
+        .control_panel:has(#occupation_size--m:checked) ~ .preview_area .occupation {
+            font-size: 1.1rem
+        }
+        .control_panel:has(#occupation_size--l:checked) ~ .preview_area .occupation {
+            font-size: 1.3rem
+        }
+
+     /* 7. Change occupation letter spacing */
+        #occupation_spacing--tight:checked ~ #occupation_spacing--tight-label,
+        #occupation_spacing--normal:checked ~ #occupation_spacing--normal-label,
+        #occupation_spacing--wide:checked ~ #occupation_spacing--wide-label {
+            font-weight: bold
+        }
+        .control_panel:has(#occupation_spacing--tight:checked) ~ .preview_area .occupation {
+            letter-spacing: -0.03em
+        }
+        .control_panel:has(#occupation_spacing--normal:checked) ~ .preview_area .occupation {
+            letter-spacing: 0.02em
+        }
+        .control_panel:has(#occupation_spacing--wide:checked) ~ .preview_area .occupation {
+            letter-spacing: 0.18em
+        }
+
+    /* 8. Change desciption size */
+        #desc_size--s:checked ~ #desc_size--s-label,
+        #desc_size--m:checked ~ #desc_size--m-label,
+        #desc_size--l:checked ~ #desc_size--l-label {
+            font-weight: bold
+        }
+        .control_panel:has(#desc_size--s:checked) ~ .preview_area .desc {
+            font-size: 0.9em
+        }
+        .control_panel:has(#desc_size--m:checked) ~ .preview_area .desc {
+            font-size: 1em
+        }
+        .control_panel:has(#desc_size--l:checked) ~ .preview_area .desc {
+            font-size: 1.125em
+        }
+
+    /* 9. Change description line height */
+        #desc_line--tight:checked ~ #desc_line--tight-label,
+        #desc_line--normal:checked ~ #desc_line--normal-label,
+        #desc_line--loose:checked ~ #desc_line--loose-label {
+            font-weight: bold
+        }
+        .control_panel:has(#desc_line--tight:checked) ~ .preview_area .desc {
+            line-height: 1.6
+        }
+        .control_panel:has(#desc_line--normal:checked) ~ .preview_area .desc {
+            line-height: 1.8
+        }
+        .control_panel:has(#desc_line--loose:checked) ~ .preview_area .desc {
+            line-height: 2
+        }
+
+    /* 10. Change Button Color */
+        #btn_color--dark:checked ~ #btn_color--dark-label,
+        #btn_color--blue:checked ~ #btn_color--blue-label,
+        #btn_color--light:checked ~ #btn_color--light-label {
+            font-weight: bold
+        }
+        .control_panel:has(#btn_color--dark:checked) ~ .preview_area .btn_contact {
+            background-color: #1a1a1a;
+            color: #fff
+        }
+        .control_panel:has(#btn_color--blue:checked) ~ .preview_area .btn_contact {
+            background-color: blue;
+            color: #fff
+        }
+        .control_panel:has(#btn_color--light:checked) ~ .preview_area .btn_contact {
+            background-color: #f5f5f5
+        }
+
+
+
+
+    /* Info - Default Style */
+        .full_name {
+            line-height: 1.2;
+        }
+        .occupation {
+            font-size: 1.3rem;
+            line-height:1.5;
+        }
+        .skills {
+            font-size: 0.9rem;
+            padding: 0.2em 0.5em;
+            margin: 0.2em;
+            background-color: #f0f0f0;
+        }
+        .btn_contact {
+            font-size: 1rem;
+            padding: 0.5em 1em;
+            margin-top: 2rem;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="main_container">
+        <!-- Block Control Panel-->
+        <div class="control_panel">
+            <!-- 1. Change theme background -->
+            <p class="option-title">1. Màu giao diện</p>
+            <input type="radio" name="background_theme" id="background_theme--light" checked="checked" hidden>
+            <label for="background_theme--light" id="background_theme--light-label">Light</label>
+            <input type="radio" name="background_theme" id="background_theme--gray" hidden>
+            <label for="background_theme--gray" id="background_theme--gray-label">Gray</label>
+            <input type="radio" name="background_theme" id="background_theme--yellow" hidden>
+            <label for="background_theme--yellow" id="background_theme--yellow-label">Yellow</label>
+            <input type="radio" name="background_theme" id="background_theme--blue" hidden>
+            <label for="background_theme--blue" id="background_theme--blue-label">Blue</label>
+            <input type="radio" name="background_theme" id="background_theme--pink" hidden>
+            <label for="background_theme--pink" id="background_theme--pink-label">Pink</label>
+
+            <!-- 2. Change name size  -->
+            <p class="option-title">2. Kích thước tên</p>
+            <input type="radio" name="name_size" id="name_size--s" checked="checked" hidden>
+            <label for="name_size--s" id="name_size--s-label">Small</label>
+            <input type="radio" name="name_size" id="name_size--m" hidden>
+            <label for="name_size--m" id="name_size--m-label">Medium</label>
+            <input type="radio" name="name_size" id="name_size--l" hidden>
+            <label for="name_size--l" id="name_size--l-label">Large</label>
+
+            <!-- 3. Change name text style  -->
+            <p class="option-title">3. Kiểu chữ tên</p>
+            <input type="radio" name="name_style" id="name_style--normal" checked="checked" hidden>
+            <label for="name_style--normal" id="name_style--normal-label">Normal</label>
+            <input type="radio" name="name_style" id="name_style--uppercase" hidden>
+            <label for="name_style--uppercase" id="name_style--uppercase-label">Uppercase</label>
+
+            <!-- 4. Change name color -->
+            <p class="option-title">4. Màu chữ tên</p>
+            <input type="radio" name="name_color" id="name_color--dark" checked="checked" hidden>
+            <label for="name_color--dark" id="name_color--dark-label">Dark</label>
+            <input type="radio" name="name_color" id="name_color--blue" hidden>
+            <label for="name_color--blue" id="name_color--blue-label">Blue</label>
+            <input type="radio" name="name_color" id="name_color--green" hidden>
+            <label for="name_color--green" id="name_color--green-label">Green</label>
+            <input type="radio" name="name_color" id="name_color--red" hidden>
+            <label for="name_color--red" id="name_color--red-label">Red</label>
+
+            <!-- 5.Change align options -->
+            <p class="option-title">5. Căn lề hồ sơ</p>
+            <input type="radio" name="align_options" id="align_options--left" checked="checked" hidden>
+            <label for="align_options--left" id="align_options--left-label">Left</label>
+            <input type="radio" name="align_options" id="align_options--center" hidden>
+            <label for="align_options--center" id="align_options--center-label">Center</label>
+            <input type="radio" name="align_options" id="align_options--right" hidden>
+            <label for="align_options--right" id="align_options--right-label">Right</label>
+
+            <!-- 6. Change occupation size  -->
+            <p class="option-title">6. Kích thước nghề nghiệp</p>
+            <input type="radio" name="occupation_size" id="occupation_size--s" checked="checked" hidden>
+            <label for="occupation_size--s" id="occupation_size--s-label">Small</label>
+            <input type="radio" name="occupation_size" id="occupation_size--m" hidden>
+            <label for="occupation_size--m" id="occupation_size--m-label">Medium</label>
+            <input type="radio" name="occupation_size" id="occupation_size--l" hidden>
+            <label for="occupation_size--l" id="occupation_size--l-label">Large</label>
+
+            <!-- 7. Change occupation letter spacing  -->
+            <p class="option-title">7. Khoảng cách chữ nghề nghiệp</p>
+            <input type="radio" name="occupation_spacing" id="occupation_spacing--tight" checked="checked" hidden>
+            <label for="occupation_spacing--tight" id="occupation_spacing--tight-label">Tight</label>
+            <input type="radio" name="occupation_spacing" id="occupation_spacing--normal" hidden>
+            <label for="occupation_spacing--normal" id="occupation_spacing--normal-label">Normal</label>
+            <input type="radio" name="occupation_spacing" id="occupation_spacing--wide" hidden>
+            <label for="occupation_spacing--wide" id="occupation_spacing--wide-label">Wide</label>
+
+            <!-- 8. Change description size  -->
+            <p class="option-title">8. Kích thước mô tả</p>
+            <input type="radio" name="desc_size" id="desc_size--s" checked="checked" hidden>
+            <label for="desc_size--s" id="desc_size--s-label">Small</label>
+            <input type="radio" name="desc_size" id="desc_size--m" hidden>
+            <label for="desc_size--m" id="desc_size--m-label">Medium</label>
+            <input type="radio" name="desc_size" id="desc_size--l" hidden>
+            <label for="desc_size--l" id="desc_size--l-label">Large</label>
+
+            <!-- 9. Change line height  -->
+            <p class="option-title">9. Giãn dòng mô tả</p>
+            <input type="radio" name="desc_line" id="desc_line--tight" checked="checked" hidden>
+            <label for="desc_line--tight" id="desc_line--tight-label">Tight</label>
+            <input type="radio" name="desc_line" id="desc_line--normal" hidden>
+            <label for="desc_line--normal" id="desc_line--normal-label">Normal</label>
+            <input type="radio" name="desc_line" id="desc_line--loose" hidden>
+            <label for="desc_line--loose" id="desc_line--loose-label">Loose</label>
+
+            <!-- 10. Change button color  -->
+            <p class="option-title">10. Màu nút liên hệ</p>
+            <input type="radio" name="btn_color" id="btn_color--dark" checked="checked" hidden>
+            <label for="btn_color--dark" id="btn_color--dark-label">Dark</label>
+            <input type="radio" name="btn_color" id="btn_color--blue" hidden>
+            <label for="btn_color--blue" id="btn_color--blue-label">Blue</label>
+            <input type="radio" name="btn_color" id="btn_color--light" hidden>
+            <label for="btn_color--light" id="btn_color--light-label">Light</label>
+
+
+
+        </div>
+
+        <!-- Block Preview Info -->
+        <div class="preview_area">
+            <p class="full_name">Nguyễn Văn A</p>
+            <p class="occupation">Marketing Executive</p>
+            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consequat, elit at feugiat ullamcorper, massa lorem dapibus arcu, eu pellentesque eros nisl in massa. Proin in pulvinar nibh, mattis pharetra eros. Fusce lectus risus, dictum molestie ornare et, suscipit a quam. Mauris id dictum augue, ac fermentum nibh. Nullam ullamcorper vehicula mauris quis feugiat. Nam imperdiet sapien felis, et maximus lectus bibendum non. Etiam ullamcorper magna id erat pellentesque tristique. Sed quis ligula vitae ex porttitor tristique. Nam dapibus sagittis semper. Curabitur scelerisque sapien ac enim congue malesuada. Donec non rutrum nulla, in pellentesque ligula. Quisque convallis molestie nulla, ac vulputate quam ultrices quis. Suspendisse potenti. Aliquam a arcu eget felis molestie ultricies.</p>
+            <div class="skills_container">
+                <span class="skills">Skills A</span>
+                <span class="skills">Skills B</span>
+                <span class="skills">Skills C</span>
+                <span class="skills">Skills D</span>
+            </div>
+            <button class="btn_contact">Contact</button>
+        </div>
+    </div>
+
+
+</body>
+</html>
