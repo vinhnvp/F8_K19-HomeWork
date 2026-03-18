@@ -25,7 +25,7 @@
         .control_panel,
         .preview_area {
             border: none;
-            height: calc(100vh - 40px);
+            min-height: calc(100vh - 40px);
             display: inline-block;
             box-sizing: border-box;
             vertical-align: top;
@@ -46,15 +46,16 @@
             margin-right: 10px;
             padding: 24px
         }
-        .option-title {
-            margin-top: 24px
+        p.option-title {
+            margin: 16px 0 4px 0;
         }
         label {
             font-size: 0.9rem;
             padding: 0.5em 1em;
-            margin: 0 0.2em;
+            margin: 0.2em 0.2em;
             background: #ddd;
-            cursor: pointer
+            cursor: pointer;
+            display: inline-block
         }
 
 
@@ -172,16 +173,13 @@
             font-weight: bold
         }
         .control_panel:has(#align_options--left:checked) ~ .preview_area {
-            text-align: left;
-            vertical-align: left
+            text-align: left
         }
         .control_panel:has(#align_options--center:checked) ~ .preview_area {
-            text-align: center;
-            vertical-align: center
+            text-align: center
         }
         .control_panel:has(#align_options--right:checked) ~ .preview_area {
-            text-align: right;
-            vertical-align: right
+            text-align: right
         }
 
     /* 6. Change occupation size */
@@ -267,139 +265,137 @@
         }
 
 
-
-
     </style>
 </head>
 <body>
-    <div class="main_container">
-        <!-- Block Control Panel-->
-        <div class="control_panel">
-            <!-- 1. Change theme background -->
-            <p class="option-title">1. Màu giao diện</p>
-            <input type="radio" name="background_theme" id="background_theme--light" checked="checked" hidden>
-            <label for="background_theme--light" id="background_theme--light-label">Light</label>
-            <input type="radio" name="background_theme" id="background_theme--gray" hidden>
-            <label for="background_theme--gray" id="background_theme--gray-label">Gray</label>
-            <input type="radio" name="background_theme" id="background_theme--yellow" hidden>
-            <label for="background_theme--yellow" id="background_theme--yellow-label">Yellow</label>
-            <input type="radio" name="background_theme" id="background_theme--blue" hidden>
-            <label for="background_theme--blue" id="background_theme--blue-label">Blue</label>
-            <input type="radio" name="background_theme" id="background_theme--pink" hidden>
-            <label for="background_theme--pink" id="background_theme--pink-label">Pink</label>
+<div class="main_container">
+    <!-- Block Control Panel-->
+    <div class="control_panel">
+        <!-- 1. Change theme background -->
+        <p class="option-title">1. Màu giao diện</p>
+        <input type="radio" name="background_theme" id="background_theme--light" checked="checked" hidden>
+        <label for="background_theme--light" id="background_theme--light-label">Light</label>
+        <input type="radio" name="background_theme" id="background_theme--gray" hidden>
+        <label for="background_theme--gray" id="background_theme--gray-label">Gray</label>
+        <input type="radio" name="background_theme" id="background_theme--yellow" hidden>
+        <label for="background_theme--yellow" id="background_theme--yellow-label">Yellow</label>
+        <input type="radio" name="background_theme" id="background_theme--blue" hidden>
+        <label for="background_theme--blue" id="background_theme--blue-label">Blue</label>
+        <input type="radio" name="background_theme" id="background_theme--pink" hidden>
+        <label for="background_theme--pink" id="background_theme--pink-label">Pink</label>
 
-            <!-- 2. Change name size  -->
-            <p class="option-title">2. Kích thước tên</p>
-            <input type="radio" name="name_size" id="name_size--s" checked="checked" hidden>
-            <label for="name_size--s" id="name_size--s-label">Small</label>
-            <input type="radio" name="name_size" id="name_size--m" hidden>
-            <label for="name_size--m" id="name_size--m-label">Medium</label>
-            <input type="radio" name="name_size" id="name_size--l" hidden>
-            <label for="name_size--l" id="name_size--l-label">Large</label>
+        <!-- 2. Change name size  -->
+        <p class="option-title">2. Kích thước tên</p>
+        <input type="radio" name="name_size" id="name_size--s" checked="checked" hidden>
+        <label for="name_size--s" id="name_size--s-label">Small</label>
+        <input type="radio" name="name_size" id="name_size--m" hidden>
+        <label for="name_size--m" id="name_size--m-label">Medium</label>
+        <input type="radio" name="name_size" id="name_size--l" hidden>
+        <label for="name_size--l" id="name_size--l-label">Large</label>
 
-            <!-- 3. Change name text style  -->
-            <p class="option-title">3. Kiểu chữ tên</p>
-            <input type="radio" name="name_style" id="name_style--normal" checked="checked" hidden>
-            <label for="name_style--normal" id="name_style--normal-label">Normal</label>
-            <input type="radio" name="name_style" id="name_style--uppercase" hidden>
-            <label for="name_style--uppercase" id="name_style--uppercase-label">Uppercase</label>
+        <!-- 3. Change name text style  -->
+        <p class="option-title">3. Kiểu chữ tên</p>
+        <input type="radio" name="name_style" id="name_style--normal" checked="checked" hidden>
+        <label for="name_style--normal" id="name_style--normal-label">Normal</label>
+        <input type="radio" name="name_style" id="name_style--uppercase" hidden>
+        <label for="name_style--uppercase" id="name_style--uppercase-label">Uppercase</label>
 
-            <!-- 4. Change name color -->
-            <p class="option-title">4. Màu chữ tên</p>
-            <input type="radio" name="name_color" id="name_color--dark" checked="checked" hidden>
-            <label for="name_color--dark" id="name_color--dark-label">Dark</label>
-            <input type="radio" name="name_color" id="name_color--blue" hidden>
-            <label for="name_color--blue" id="name_color--blue-label">Blue</label>
-            <input type="radio" name="name_color" id="name_color--green" hidden>
-            <label for="name_color--green" id="name_color--green-label">Green</label>
-            <input type="radio" name="name_color" id="name_color--red" hidden>
-            <label for="name_color--red" id="name_color--red-label">Red</label>
+        <!-- 4. Change name color -->
+        <p class="option-title">4. Màu chữ tên</p>
+        <input type="radio" name="name_color" id="name_color--dark" checked="checked" hidden>
+        <label for="name_color--dark" id="name_color--dark-label">Dark</label>
+        <input type="radio" name="name_color" id="name_color--blue" hidden>
+        <label for="name_color--blue" id="name_color--blue-label">Blue</label>
+        <input type="radio" name="name_color" id="name_color--green" hidden>
+        <label for="name_color--green" id="name_color--green-label">Green</label>
+        <input type="radio" name="name_color" id="name_color--red" hidden>
+        <label for="name_color--red" id="name_color--red-label">Red</label>
 
-            <!-- 5.Change align options -->
-            <p class="option-title">5. Căn lề hồ sơ</p>
-            <input type="radio" name="align_options" id="align_options--left" checked="checked" hidden>
-            <label for="align_options--left" id="align_options--left-label">Left</label>
-            <input type="radio" name="align_options" id="align_options--center" hidden>
-            <label for="align_options--center" id="align_options--center-label">Center</label>
-            <input type="radio" name="align_options" id="align_options--right" hidden>
-            <label for="align_options--right" id="align_options--right-label">Right</label>
+        <!-- 5.Change align options -->
+        <p class="option-title">5. Căn lề hồ sơ</p>
+        <input type="radio" name="align_options" id="align_options--left" checked="checked" hidden>
+        <label for="align_options--left" id="align_options--left-label">Left</label>
+        <input type="radio" name="align_options" id="align_options--center" hidden>
+        <label for="align_options--center" id="align_options--center-label">Center</label>
+        <input type="radio" name="align_options" id="align_options--right" hidden>
+        <label for="align_options--right" id="align_options--right-label">Right</label>
 
-            <!-- 6. Change occupation size  -->
-            <p class="option-title">6. Kích thước nghề nghiệp</p>
-            <input type="radio" name="occupation_size" id="occupation_size--s" checked="checked" hidden>
-            <label for="occupation_size--s" id="occupation_size--s-label">Small</label>
-            <input type="radio" name="occupation_size" id="occupation_size--m" hidden>
-            <label for="occupation_size--m" id="occupation_size--m-label">Medium</label>
-            <input type="radio" name="occupation_size" id="occupation_size--l" hidden>
-            <label for="occupation_size--l" id="occupation_size--l-label">Large</label>
+        <!-- 6. Change occupation size  -->
+        <p class="option-title">6. Kích thước nghề nghiệp</p>
+        <input type="radio" name="occupation_size" id="occupation_size--s" checked="checked" hidden>
+        <label for="occupation_size--s" id="occupation_size--s-label">Small</label>
+        <input type="radio" name="occupation_size" id="occupation_size--m" hidden>
+        <label for="occupation_size--m" id="occupation_size--m-label">Medium</label>
+        <input type="radio" name="occupation_size" id="occupation_size--l" hidden>
+        <label for="occupation_size--l" id="occupation_size--l-label">Large</label>
 
-            <!-- 7. Change occupation letter spacing  -->
-            <p class="option-title">7. Khoảng cách chữ nghề nghiệp</p>
-            <input type="radio" name="occupation_spacing" id="occupation_spacing--tight" checked="checked" hidden>
-            <label for="occupation_spacing--tight" id="occupation_spacing--tight-label">Tight</label>
-            <input type="radio" name="occupation_spacing" id="occupation_spacing--normal" hidden>
-            <label for="occupation_spacing--normal" id="occupation_spacing--normal-label">Normal</label>
-            <input type="radio" name="occupation_spacing" id="occupation_spacing--wide" hidden>
-            <label for="occupation_spacing--wide" id="occupation_spacing--wide-label">Wide</label>
+        <!-- 7. Change occupation letter spacing  -->
+        <p class="option-title">7. Khoảng cách chữ nghề nghiệp</p>
+        <input type="radio" name="occupation_spacing" id="occupation_spacing--tight" checked="checked" hidden>
+        <label for="occupation_spacing--tight" id="occupation_spacing--tight-label">Tight</label>
+        <input type="radio" name="occupation_spacing" id="occupation_spacing--normal" hidden>
+        <label for="occupation_spacing--normal" id="occupation_spacing--normal-label">Normal</label>
+        <input type="radio" name="occupation_spacing" id="occupation_spacing--wide" hidden>
+        <label for="occupation_spacing--wide" id="occupation_spacing--wide-label">Wide</label>
 
-            <!-- 8. Change description size  -->
-            <p class="option-title">8. Kích thước mô tả</p>
-            <input type="radio" name="desc_size" id="desc_size--s" checked="checked" hidden>
-            <label for="desc_size--s" id="desc_size--s-label">Small</label>
-            <input type="radio" name="desc_size" id="desc_size--m" hidden>
-            <label for="desc_size--m" id="desc_size--m-label">Medium</label>
-            <input type="radio" name="desc_size" id="desc_size--l" hidden>
-            <label for="desc_size--l" id="desc_size--l-label">Large</label>
+        <!-- 8. Change description size  -->
+        <p class="option-title">8. Kích thước mô tả</p>
+        <input type="radio" name="desc_size" id="desc_size--s" checked="checked" hidden>
+        <label for="desc_size--s" id="desc_size--s-label">Small</label>
+        <input type="radio" name="desc_size" id="desc_size--m" hidden>
+        <label for="desc_size--m" id="desc_size--m-label">Medium</label>
+        <input type="radio" name="desc_size" id="desc_size--l" hidden>
+        <label for="desc_size--l" id="desc_size--l-label">Large</label>
 
-            <!-- 9. Change line height  -->
-            <p class="option-title">9. Giãn dòng mô tả</p>
-            <input type="radio" name="desc_line" id="desc_line--tight" checked="checked" hidden>
-            <label for="desc_line--tight" id="desc_line--tight-label">Tight</label>
-            <input type="radio" name="desc_line" id="desc_line--normal" hidden>
-            <label for="desc_line--normal" id="desc_line--normal-label">Normal</label>
-            <input type="radio" name="desc_line" id="desc_line--loose" hidden>
-            <label for="desc_line--loose" id="desc_line--loose-label">Loose</label>
+        <!-- 9. Change line height  -->
+        <p class="option-title">9. Giãn dòng mô tả</p>
+        <input type="radio" name="desc_line" id="desc_line--tight" checked="checked" hidden>
+        <label for="desc_line--tight" id="desc_line--tight-label">Tight</label>
+        <input type="radio" name="desc_line" id="desc_line--normal" hidden>
+        <label for="desc_line--normal" id="desc_line--normal-label">Normal</label>
+        <input type="radio" name="desc_line" id="desc_line--loose" hidden>
+        <label for="desc_line--loose" id="desc_line--loose-label">Loose</label>
 
-            <!-- 10. Change button color  -->
-            <p class="option-title">10. Màu nút liên hệ</p>
-            <input type="radio" name="btn_color" id="btn_color--dark" checked="checked" hidden>
-            <label for="btn_color--dark" id="btn_color--dark-label">Dark</label>
-            <input type="radio" name="btn_color" id="btn_color--blue" hidden>
-            <label for="btn_color--blue" id="btn_color--blue-label">Blue</label>
-            <input type="radio" name="btn_color" id="btn_color--light" hidden>
-            <label for="btn_color--light" id="btn_color--light-label">Light</label>
+        <!-- 10. Change button color  -->
+        <p class="option-title">10. Màu nút liên hệ</p>
+        <input type="radio" name="btn_color" id="btn_color--dark" checked="checked" hidden>
+        <label for="btn_color--dark" id="btn_color--dark-label">Dark</label>
+        <input type="radio" name="btn_color" id="btn_color--blue" hidden>
+        <label for="btn_color--blue" id="btn_color--blue-label">Blue</label>
+        <input type="radio" name="btn_color" id="btn_color--light" hidden>
+        <label for="btn_color--light" id="btn_color--light-label">Light</label>
 
 
 
-        </div>
-
-        <!-- Block Preview Info -->
-        <div class="preview_area">
-            <p class="full_name">Nguyễn Minh Khoa</p>
-            <p class="occupation">Frontend Developer · Ho Chi Minh City</p>
-            <p class="desc">
-                Tôi là một lập trình viên Frontend với hơn 3 năm kinh nghiệm xây dựng giao diện web hiện đại, tập trung vào
-                hiệu suất và trải nghiệm người dùng. Tôi yêu thích việc biến ý tưởng sáng tạo thành sản phẩm thực tế.
-            </p>
-            <div class="skills_container">
-                <p class="skills-title">Kỹ năng</p>
-                <span class="skills">HTML5</span>
-                <span class="skills">CSS3</span>
-                <span class="skills">JavaScript</span>
-                <span class="skills">React</span>
-                <span class="skills">Figma</span>
-                <span class="skills">Git</span>
-            </div>
-            <div class="hobbies_container">
-                <p class="hobbies-title">Sở thích</p>
-                <span class="hobby">Nhiếp ảnh</span>
-                <span class="hobby">Đọc sách</span>
-                <span class="hobby">Du lịch</span>
-                <span class="hobby">Cà phê</span>
-            </div>
-            <button class="btn_contact">Liên hệ với tôi</button>
-        </div>
     </div>
+
+    <!-- Block Preview Info -->
+    <div class="preview_area">
+        <p class="full_name">Nguyễn Minh Khoa</p>
+        <p class="occupation">Frontend Developer · Ho Chi Minh City</p>
+        <p class="desc">
+            Tôi là một lập trình viên Frontend với hơn 3 năm kinh nghiệm xây dựng giao diện web hiện đại, tập trung vào
+            hiệu suất và trải nghiệm người dùng. Tôi yêu thích việc biến ý tưởng sáng tạo thành sản phẩm thực tế.
+        </p>
+        <div class="skills_container">
+            <p class="skills-title">Kỹ năng</p>
+            <span class="skills">HTML5</span>
+            <span class="skills">CSS3</span>
+            <span class="skills">JavaScript</span>
+            <span class="skills">React</span>
+            <span class="skills">Figma</span>
+            <span class="skills">Git</span>
+        </div>
+        <div class="hobbies_container">
+            <p class="hobbies-title">Sở thích</p>
+            <span class="hobby">Nhiếp ảnh</span>
+            <span class="hobby">Đọc sách</span>
+            <span class="hobby">Du lịch</span>
+            <span class="hobby">Cà phê</span>
+        </div>
+        <button class="btn_contact">Liên hệ với tôi</button>
+    </div>
+</div>
 
 
 </body>
