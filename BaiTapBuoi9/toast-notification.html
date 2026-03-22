@@ -16,6 +16,10 @@
             font-size: 62.5%;
             font-family: "Inter", sans-serif;
         }
+        body {
+            font-size: 1.6rem;
+        }
+
         .toast-noti-container {
             padding: 2em;
             margin: 1em;
@@ -24,29 +28,28 @@
         .open-btn,
         .close-btn {
             display: inline-block;
-            font-size: 1.6rem;
             font-weight: bold;
             cursor: pointer;
         }
         .open-btn {
-            padding: 14px 24px;
+            padding: 12px 24px;
             margin-right: 18px;
             background-color: #000000;
             color: #ffffff;
-
             letter-spacing: 0.05rem;
             border-radius: 4px;
 
         }
         .close-btn {
-            min-height: 1.5rem;
-            width: 1.5rem;
-            padding: 2px 4px 4px 4px;
-            margin-left: 4px;
-            text-align: center;
+            font-size: 2rem;
+            margin-left: 12px;
+            color: #333333;
+            padding: 0.2em 0.4em;
             border-radius: 50px;
-            background-color: darkgreen;
-            color: #fff;
+            background-color: #a3e7a3;
+        }
+        .save-icon {
+            margin-bottom: -3px;
         }
 
     /*
@@ -56,19 +59,17 @@
         .toast {
             display: inline-block;
             border-radius: 4px;
-            background-color: lightgreen;
+            background-color: #dcffdc;
+            border: 1px solid #62d129;
             padding: 12px;
             display: none;
         }
         .toast--success {
             padding: 4px;
-            font-size: 1.6rem;
             font-weight: bold;
             color: #333333;
         }
-        .save-icon {
-            margin-bottom: -2px;
-        }
+
 
     /*
     - Bấm "Lưu ghi chú" --> input được checked --> hiện toast (inline-block ghi đè none)
@@ -86,8 +87,8 @@
         <input type="checkbox" id="toast-toggle" hidden>
         <label for="toast-toggle" class="open-btn">Lưu ghi chú</label>
         <div class="toast">
-            <svg class="save-icon w-[34px] h-[34px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="darkorange" viewBox="0 0 24 24">
-                <path d="M7.833 2c-.507 0-.98.216-1.318.576A1.92 1.92 0 0 0 6 3.89V21a1 1 0 0 0 1.625.78L12 18.28l4.375 3.5A1 1 0 0 0 18 21V3.889c0-.481-.178-.954-.515-1.313A1.808 1.808 0 0 0 16.167 2H7.833Z"/>
+            <svg class="save-icon" width="20" height="20" fill="#166534" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
             </svg>
             <span class="toast--success">Lưu thành công</span>
             <label for="toast-toggle" class="close-btn">&times;</label>

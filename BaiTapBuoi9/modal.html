@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Modal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        html {
+            font-size: 62.5%;
+            font-family: "Inter", sans-serif
+        }
+        body {
+            font-size: 1.6rem
+        }
+
+        .open-btn {
+            padding: 12px 24px;
+            margin: 24px;
+            cursor: pointer;
+            display: inline-block;
+            background-color: #3b82f6;
+            color: #ffffff;
+            border-radius: 4px;
+        }
+        .modal {
+            border-radius: 12px;
+            margin: auto;
+            padding: 40px;
+            background-color: #ffffff;
+            width: 300px;
+            text-align: center
+        }
+        .modal>p {
+            font-size: 2rem
+        }
+        .close-btn {
+            padding: 12px 24px;
+            margin-top: 24px;
+            cursor: pointer;
+            display: inline-block;
+            background-color: #ef4444;
+            color: #ffffff;
+            border-radius: 4px;
+        }
+
+    /* Overlay và modal mặc định sẽ ẩn, vì overlay là thẻ cha nên chỉ cần "display: none" tại class overlay  */
+         .overlay {
+            min-height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 120px;
+            display: none
+        }
+
+    /* Ẩn vào label .open-btn để kích hoạt checked thẻ input */
+        #modal-toggle:checked ~ .overlay {
+            display: block
+        }
+
+    /* Vì overlay và nút đóng close-btn đều là label có for là id thẻ input #modal-toggle nên khi ấn vào
+     nền overlay hay close-btn lần nữa sẽ unchecked input --> display: none được thay thế --> ẩn thông báo */
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <input type="checkbox" id="modal-toggle" hidden>
+        <label for="modal-toggle" class="open-btn">Mở modal</label>
+        <label for="modal-toggle" class="overlay">
+            <div class="modal">
+                <p>Đây là nội dung thông báo!</p>
+                <label for="modal-toggle" class="close-btn">Đóng</label>
+            </div>
+        </label>
+    </div>
+
+
+
+</body>
+</html>
