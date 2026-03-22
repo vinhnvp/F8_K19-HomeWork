@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Toast Notification</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            font-size: 62.5%;
+            font-family: "Inter", sans-serif;
+        }
+        .toast-noti-container {
+            padding: 2em;
+            margin: 1em;
+            border-radius: 12px;
+        }
+        .open-btn,
+        .close-btn {
+            display: inline-block;
+            font-size: 1.6rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .open-btn {
+            padding: 14px 24px;
+            margin-right: 18px;
+            background-color: #000000;
+            color: #ffffff;
+
+            letter-spacing: 0.05rem;
+            border-radius: 4px;
+
+        }
+        .close-btn {
+            min-height: 1.5rem;
+            width: 1.5rem;
+            padding: 2px 4px 4px 4px;
+            margin-left: 4px;
+            text-align: center;
+            border-radius: 50px;
+            background-color: darkgreen;
+            color: #fff;
+        }
+
+    /*
+    - CSS cụm thông báo thành công
+    - Mặc định thông báo toast này sẽ ẩn - display: none
+    */
+        .toast {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: lightgreen;
+            padding: 12px;
+            display: none;
+        }
+        .toast--success {
+            padding: 4px;
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #333333;
+        }
+        .save-icon {
+            margin-bottom: -2px;
+        }
+
+    /*
+    - Bấm "Lưu ghi chú" --> input được checked --> hiện toast (inline-block ghi đè none)
+    - Gán for=id của input cho nút close --> bấm vào unchecked sẽ trở về mặc định none
+    */
+        #toast-toggle:checked ~ .toast {
+            display: inline-block;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="toast-noti-container">
+        <input type="checkbox" id="toast-toggle" hidden>
+        <label for="toast-toggle" class="open-btn">Lưu ghi chú</label>
+        <div class="toast">
+            <svg class="save-icon w-[34px] h-[34px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="darkorange" viewBox="0 0 24 24">
+                <path d="M7.833 2c-.507 0-.98.216-1.318.576A1.92 1.92 0 0 0 6 3.89V21a1 1 0 0 0 1.625.78L12 18.28l4.375 3.5A1 1 0 0 0 18 21V3.889c0-.481-.178-.954-.515-1.313A1.808 1.808 0 0 0 16.167 2H7.833Z"/>
+            </svg>
+            <span class="toast--success">Lưu thành công</span>
+            <label for="toast-toggle" class="close-btn">&times;</label>
+        </div>
+    </div>
+
+</body>
+</html>
