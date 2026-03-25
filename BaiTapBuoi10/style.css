@@ -134,7 +134,6 @@ header {
 }
 
 
-
 /* CSS Submenu cấp 2 */
 .nav_submenu_expand {
     display: none;
@@ -159,5 +158,3 @@ header {
 .nav_submenu_expand_item:hover > a {
     color: #d62828
 }
-
-
