@@ -1,54 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fullstack F8 - K19</title>
+    <style>
+        :root {
+            --primary: #f05123;
+            --primary-hover: #d14018;
+            --bg-body: #f3f4f6;
+            --bg-card: #ffffff;
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --border-color: #e5e7eb;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* List cấp 1 */
+        .lesson-list {
+            display: block;
+        }
+
+        .lesson-item {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .lesson-item > a {
+            font-weight: 400;
+        }
+
+        /* List cấp 2 */
+        .task-list {
+            margin-top: 0.5rem;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--border-color);
+        }
+
+        .task-item {
+            position: relative;
+            margin-bottom: 0.6rem;
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-muted);
+        }
+
+        /* Line dọc */
+        .task-item::before {
+            content: "";
+            position: absolute;
+            left: -1.5rem;
+            top: 0.75rem;
+            width: 12px;
+            height: 2px;
+            background-color: var(--border-color);
+        }
+
+        /* CSS thẻ a */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+        }
+
+        a:hover {
+            color: var(--primary-hover);
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Tổng hợp link bài tập</h1>
-    <ul>
-        <li>Bài tập buổi 2: <a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi2/">Github</a></li>
-        <br>
-        <li>Bài tập buổi 3: <a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi3/baitap1.html">(3.1) baitap1.html</a> và <a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi3/link-project">(3.2) link-project</a></li>
-        <br>
-        <li> Bài tập buổi 4:
-            <ol>
-                <li>Bảng 1: <a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi4/bang1.html">bang1.html</a></li>
-                <li>Bảng 2: <a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi4/bang2.html">bang2.html</a></li>
-                <li>Form: <a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi4/form.html">form.html</a></li>
-            </ol>
+<div class="container">
+    <h1 class="page-title">Tổng hợp link bài tập</h1>
+
+    <ul class="lesson-list">
+        <li class="lesson-item">Bài tập buổi 2:
+            <a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi2/">Github</a>
         </li>
-        <br>
-        <li>Bài tập cuối khóa HTML: <a href="https://vinhnvp.github.io/F8_K19-HomeWork/Baikiemtrahtml/index.html">index.html</a></li>
-        <br>
-        <li>Bài tập buổi 6:
-            <ul>
-                <li><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi6/f8-system/home/index.html">Home</a></li>
-                <li><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi6/f8-system/courses/index.html">Courses</a></li>
-                <li><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi6/f8-system/students/index.html">Students</a></li>
-                <li><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi6/f8-system/teachers/index.html">Teachers</a></li>
-                <li><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi6/f8-system/orders/index.html">Orders</a></li>
-                <li><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi6/f8-system/reports/index.html">Reports</a></li>
-                <li><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi6/f8-system/dashboard/index.html">Dashboard</a></li>
-                <li><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi6/phan-tich.md">phan-tich.md</a></li>
+
+        <li class="lesson-item">Bài tập buổi 3:
+            <a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi3/baitap1.html">(3.1) baitap1.html</a> và
+            <a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi3/link-project">(3.2) link-project</a>
+        </li>
+
+        <li class="lesson-item">Bài tập buổi 4:
+            <ul class="task-list">
+                <li class="task-item">Bảng 1: <a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi4/bang1.html">bang1.html</a></li>
+                <li class="task-item">Bảng 2: <a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi4/bang2.html">bang2.html</a></li>
+                <li class="task-item">Form: <a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi4/form.html">form.html</a></li>
             </ul>
         </li>
-        <br>
-        <li>Bài tập buổi 7: <a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi7/bai1.html">Trung tâm cấu hình giao diện (Demo)</a></li>
-        <li>Bài tập buổi 8: <a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi8/index.html">index.html</a></li>
-        <li>Bài tập buổi 9:
-            <ul>
-                <li><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi9/bai1.html">Shapes with border attribute</a></li>
-                <li><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi9/toast-notification.html">Toast notification</a></li>
-                <li><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi9/modal.html">Modal - Close by clicking overlay</a></li>
+
+        <li class="lesson-item">Bài tập cuối khóa HTML:
+            <a href="https://vinhnvp.github.io/F8_K19-HomeWork/Baikiemtrahtml/index.html">index.html</a>
+        </li>
+
+        <li class="lesson-item">Bài tập buổi 6:
+            <ul class="task-list">
+                <li class="task-item"><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi6/f8-system/home/index.html">Home</a></li>
+                <li class="task-item"><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi6/f8-system/courses/index.html">Courses</a></li>
+                <li class="task-item"><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi6/f8-system/students/index.html">Students</a></li>
+                <li class="task-item"><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi6/f8-system/teachers/index.html">Teachers</a></li>
+                <li class="task-item"><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi6/f8-system/orders/index.html">Orders</a></li>
+                <li class="task-item"><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi6/f8-system/reports/index.html">Reports</a></li>
+                <li class="task-item"><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi6/f8-system/dashboard/index.html">Dashboard</a></li>
+                <li class="task-item"><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi6/phan-tich.md">phan-tich.md</a></li>
             </ul>
         </li>
-        <li>Bài tập buổi 10:
-            <ul>
-                <li><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi10/index.html">Navigation Bar</a></li>
-                <li><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi10/form.html">Modal Form</a></li>
+
+        <li class="lesson-item">Bài tập buổi 7:
+            <a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi7/bai1.html">Trung tâm cấu hình giao diện (Demo)</a>
+        </li>
+
+        <li class="lesson-item">Bài tập buổi 8:
+            <a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi8/index.html">index.html</a>
+        </li>
+
+        <li class="lesson-item">Bài tập buổi 9:
+            <ul class="task-list">
+                <li class="task-item"><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi9/bai1.html">Shapes with border attribute</a></li>
+                <li class="task-item"><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi9/toast-notification.html">Toast notification</a></li>
+                <li class="task-item"><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi9/modal.html">Modal - Close by clicking overlay</a></li>
+            </ul>
+        </li>
+
+        <li class="lesson-item">Bài tập buổi 10:
+            <ul class="task-list">
+                <li class="task-item"><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi10/index.html">Navigation Bar</a></li>
+                <li class="task-item"><a href="https://vinhnvp.github.io/F8_K19-HomeWork/BaiTapBuoi10/form.html">Modal Form</a></li>
             </ul>
         </li>
     </ul>
+</div>
 </body>
 </html>
