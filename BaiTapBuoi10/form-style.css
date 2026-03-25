@@ -3,7 +3,187 @@
     padding: 0
 }
 html {
-    font-size: 62.5%;
+    font-size: 16px;
     font-family: Arial, sans-serif;
     color: #333333
+}
+
+.main_container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #a855f7 0%, #c084fc 100%)
+}
+#contact-btn {
+    display: none
+}
+#contact-btn-label {
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: inline-block;
+    width: 16rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    background-color: #f05123;
+    color: #ffffff;
+    border-radius: 5rem;
+    position: absolute;
+    top: calc(50% - 2rem);
+    left: calc(50% - 8rem);
+    cursor: pointer;
+    user-select: none
+}
+#contact-btn-label:hover {
+    background-color: #d8431c
+}
+
+/*
+- Overlay và Modal mặc định display: none, chỉ hiện khi ấn vào nút "Tư vấn ngay"
+- Ấn vào overlay lần nữa sẽ ẩn overlay + modal, ấn vào modal không ẩn, chỉ ẩn khi ấn (x)
+*/
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none
+}
+.modal {
+    box-sizing: border-box;
+    width: 36rem;
+    min-height: 44rem;
+    background-color: #ffffff;
+    position: fixed;
+    top: calc(50% - 22rem);
+    left: calc(50% - 18rem);
+    padding: 2.4rem 2rem;
+    border-radius: 2rem;
+    display: none
+}
+#contact-btn:checked ~ .overlay,
+#contact-btn:checked ~ .modal {
+    display: block
+}
+
+/* CSS modal details */
+.modal-title,
+.modal-desc {
+    text-align: center
+}
+.modal-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+#contact-form {
+    margin-top: 2rem;
+}
+.input-wrapper {
+    margin-top: 1rem;
+    position: relative
+}
+.fullname-label,
+.phone-label,
+.email-label,
+.checkbox-label{
+    display: block;
+    padding: 0.4rem 0;
+    font-weight: bold;
+}
+.required-mark {
+    color: #ef4444;
+}
+.input-wrapper > input[type="text"],
+.input-wrapper > input[type="tel"],
+.input-wrapper > input[type="email"] {
+    box-sizing: border-box;
+    width: 100%;
+    height: 3.2rem;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    border: 0.1rem solid #333333;
+    background-color: #f8fafc
+}
+
+/* CSS các checkbox */
+.checkbox-wrapper {
+    position: relative;
+}
+.checkbox-wrapper > label {
+    padding: 0.4rem 0.2rem;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none
+}
+
+/* Nút x đóng modal */
+.close-modal-btn {
+    font-size: 1.2rem;
+    padding: 0.2rem 0.5rem;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    cursor: pointer
+}
+
+/* Nút "Đăng ký tư vấn ngay" */
+#submit-info-btn {
+    position: absolute;
+    left: calc(50% - 9rem);
+    bottom: 1.2rem;
+    width: 18rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #a855f7;
+    color: #ffffff;
+    border: none;
+    border-radius: 2rem;
+    /* Vô hiệu hóa nút trước khi điền thông tin đầy đủ,
+     chủ yếu ngăn việc chưa chọn ít nhất một checkbox */
+    pointer-events: none;
+    opacity: 0.5;
+}
+#submit-info-btn:hover {
+    background-color: #9333ea;
+}
+
+/* Vô hiệu hóa nút khi chưa checkbox - phương án tạm vì chưa sử dụng Javascript */
+#contact-form:has(input[type="checkbox"]:checked) #submit-info-btn {
+    pointer-events: auto;
+    cursor: pointer;
+    opacity: 1
+}
+
+/* Tooltips on hover*/
+.tooltips {
+    background-color: #1e293b;
+    color: #ffffff;
+    white-space: normal;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    position: absolute;
+    top: -3.3rem;
+    left: 0;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    display: none
+}
+.tooltips--arrow {
+    width: 0;
+    height: 0;
+    border-top: 0.5rem solid #1e293b;
+    border-right: 0.4rem solid transparent;
+    border-left: 0.4rem solid transparent;
+    position: absolute;
+    left: 1rem;
+    bottom: -0.5rem;
+}
+.input-wrapper:hover > .tooltips,
+.checkbox-wrapper:hover > .tooltips {
+    display: block;
 }

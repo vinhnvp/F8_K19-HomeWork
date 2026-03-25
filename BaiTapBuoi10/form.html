@@ -10,7 +10,91 @@
 </head>
 <body>
     <div class="main_container">
+        <input type="checkbox" id="contact-btn">
+        <label for="contact-btn" id="contact-btn-label">Tư vấn ngay</label>
+        <label for="contact-btn" class="overlay"></label>
+        <div class="modal">
+            <h2 class="modal-title">Đăng ký tư vấn</h2>
+            <p class="modal-desc">Điền thông tin để được tư vấn lộ trình học phù hợp</p>
+            <form action="https://api-gateway.fullstack.edu.vn/action_page.php" id="contact-form">
+                <div class="input-wrapper">
+                    <span class="tooltips">
+                        Nhập họ và tên đầy đủ của bạn
+                        <span class="tooltips--arrow"></span>
+                    </span>
+                    <label for="fullname" class="fullname-label">Họ và tên <span class="required-mark">*</span></label>
+                    <input type="text" name="fullname" id="fullname" placeholder="Nguyễn Văn A"  required>
+                </div>
+                <div class="input-wrapper">
+                    <span class="tooltips">
+                        Số điện thoại để chúng tôi liên hệ tư vấn
+                        <span class="tooltips--arrow"></span>
+                    </span>
+                    <label for="phone" class="phone-label">Số điện thoại <span class="required-mark">*</span></label>
+                    <input type="tel" name="phone" id="phone" placeholder="0912345678" pattern="^0[35789][0-9]{8}$"
+                          title="Vui lòng nhập số điện thoại chính xác" required>
+                </div>
+                <div class="input-wrapper">
+                    <span class="tooltips">
+                        Email nhận thông tin khóa học (không bắt buộc)
+                        <span class="tooltips--arrow"></span>
+                    </span>
+                    <label for="email" class="email-label">Email</label>
+                    <input type="email" name="email" id="email" placeholder="example@gmail.com" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                    title="Vui lòng nhập đúng định dạng email (ví dụ: example@gmail.com)">
+                </div>
+                <div class="input-wrapper">
+                    <label class="checkbox-label">Khoá học quan tâm <span class="required-mark">*</span></label>
 
+                    <div class="checkbox-wrapper">
+                        <span class="tooltips">
+                            Khóa nền tảng xây dựng giao diện web
+                            <span class="tooltips--arrow"></span>
+                        </span>
+                        <input type="checkbox" name="courses[]" id="html-css" value="html-css">
+                        <label for="html-css">HTML & CSS</label>
+                    </div>
+
+                    <div class="checkbox-wrapper">
+                        <span class="tooltips">
+                            Ngôn ngữ lập trình cho web động
+                            <span class="tooltips--arrow"></span>
+                        </span>
+                        <input type="checkbox" name="courses[]" id="javascript" value="javascript">
+                        <label for="javascript">JavaScript</label>
+                    </div>
+
+                    <div class="checkbox-wrapper">
+                        <span class="tooltips">
+                            Lộ trình hoàn chỉnh trở thành Front-end Developer
+                            <span class="tooltips--arrow"></span>
+                        </span>
+                        <input type="checkbox" name="courses[]" id="front-end" value="front-end">
+                        <label for="front-end">Front-end lộ trình</label>
+                    </div>
+
+                    <div class="checkbox-wrapper">
+                        <span class="tooltips">
+                            Thư viện JavaScript phổ biến nhất hiện nay
+                            <span class="tooltips--arrow"></span>
+                        </span>
+                        <input type="checkbox" name="courses[]" id="reactjs" value="react-js">
+                        <label for="reactjs">ReactJS</label>
+                    </div>
+
+                    <div class="checkbox-wrapper">
+                        <span class="tooltips">
+                            Chúng tôi sẽ tư vấn lộ trình phù hợp với bạn
+                            <span class="tooltips--arrow"></span>
+                        </span>
+                        <input type="checkbox" name="courses[]" id="need-advice" value="need-advice">
+                        <label for="need-advice">Chưa rõ - cần tư vấn</label>
+                    </div>
+                </div>
+                <button type="submit" id="submit-info-btn">Đăng ký tư vấn ngay</button>
+                <label for="contact-btn" class="close-modal-btn">&times;</label>
+            </form>
+        </div>
     </div>
 </body>
 </html>
