@@ -76,6 +76,12 @@ html {
     text-align: center
 }
 .modal-title {
+    color: #1e293b
+}
+.modal-desc {
+    color: #64748b
+}
+.modal-title {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
@@ -97,17 +103,23 @@ html {
 .required-mark {
     color: #ef4444;
 }
-.input-wrapper > input[type="text"],
-.input-wrapper > input[type="tel"],
-.input-wrapper > input[type="email"] {
+.input-wrapper > #fullname,
+.input-wrapper > #phone,
+.input-wrapper > #email {
     box-sizing: border-box;
     width: 100%;
     height: 3.2rem;
     font-size: 1rem;
     padding: 1rem;
     border-radius: 0.6rem;
-    border: 0.1rem solid #333333;
+    border: 0.1rem solid #e2e8f0;
     background-color: #f8fafc
+}
+.input-wrapper > #fullname:focus,
+.input-wrapper > #phone:focus,
+.input-wrapper > #email:focus {
+    outline: none;
+    border-color: #c084fc;
 }
 
 /* CSS các checkbox */
