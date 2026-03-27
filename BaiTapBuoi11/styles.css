@@ -1,0 +1,139 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+html {
+    font-size: 62.5% /* Quy đổi đơn vị về 1rem = 10px */
+}
+
+/* Style card chứa container */
+.container-wrapper {
+    width: calc(100vw - 4rem);
+    margin: 2rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 1px solid #d3d3d3;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 14px rgba(0,0,0,.05);
+    overflow: hidden;
+}
+.container-wrapper p {
+    color: #333333;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Style default container và box (display: flex chung cho 10 containers) */
+.container {
+    width: 60rem;
+    height: 20rem;
+    border: 2px solid red;
+    display: flex
+}
+.container > div {
+    width: 6rem;
+    height: 6rem;
+    background-color: #5980b1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff
+}
+
+/* --- Layout Container 1 --- */
+.layout-1 {
+    align-items: center;
+    justify-content: space-between
+}
+
+/* --- Layout Container 2 --- */
+.layout-2 {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between
+}
+
+/* --- Layout Container 3 --- */
+.layout-3 {
+    flex-direction: column;
+    align-items: center;
+}
+.layout-3 > .box-2 {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+/* --- Layout Container 4 --- */
+.layout-4 {
+    justify-content: center;
+    align-items: center
+}
+.layout-4 > .box-2 {
+    margin-left: 1rem;
+    margin-right: 4rem;
+}
+
+/* --- Layout Container 5 --- */
+.layout-5 {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center
+}
+
+/* --- Layout Container 6 --- */
+.layout-6 {
+    justify-content: space-between;
+    align-items: flex-start
+}
+
+/* --- Layout Container 7 --- */
+.layout-7 {
+    flex-direction: column;
+    align-items: center
+}
+.layout-7 > .box-2 {
+    margin-top: 6rem;
+    margin-bottom: 2rem
+}
+
+/* --- Layout Container 8 --- */
+.layout-8 {
+    align-items: center
+}
+.layout-8 > .box-2 {
+    margin: auto
+}
+
+/* --- Layout Container 9 --- */
+.layout-9 {
+    justify-content: center;
+    align-items: center
+}
+.layout-9 > .box-1 {
+    margin-top: -6rem /* Kéo box 1 lên trên */
+}
+.layout-9 > .box-2 {
+    margin: 0 2rem /* Khoảng cách giữa các box */
+}
+.layout-9 > .box-3 {
+    margin-bottom: -6rem /* Đẩy box 3 xuống dưới */
+}
+
+/* --- Layout Container 10 --- */
+.layout-10 {
+
+}
+.layout-10 > .box-1 {
+    margin-bottom: auto
+}
+.layout-10 > .box-2 {
+    margin: auto
+}
+.layout-10 > .box-3 {
+    margin-top: auto
+}
