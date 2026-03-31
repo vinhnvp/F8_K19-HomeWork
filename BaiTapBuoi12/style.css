@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family: Roboto;
+}
+body {
+    background-color: #ebf5fe;
+    color: #666666;
+}
+
+/* Default style for card container and card */
+.cards-container {
+    /* Giới hạn 1200px rộng cho nội dung khỏi tràn hết viewport */
+    width: 1200px;
+    margin: auto;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.card {
+    /* Tổng width cha chia 3 trừ 2 gap (20px x 2)*/
+    width: calc((100% - 40px) / 3);
+    height: 245px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    box-shadow: 1px 1px 12px rgba(0,0,0,.1);
+    box-sizing: border-box;
+    transition: border .1s ease-in-out;
+}
+
+/* Card header (icon + title) */
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.card-header__icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-header__icon > span {
+    color: #ffffff;
+    font-size: 32px;
+}
+.card-header > h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333333;
+    line-height: 1.3;
+    /*margin-top: 20px;*/
+    margin-bottom: 12px;
+}
+
+/* Card info (3 lines) */
+.card-info {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin-top: 12px;
+}
+
+/* Card link (learn more) */
+.card-link {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #2196f3;
+    text-decoration: none;
+}
+.card-link:hover {
+    text-decoration: underline;
+}
+
+/* Custom màu từng card */
+/* Màu icon */
+.bg--pink {
+    background-color: #ff6b6b;
+}
+.bg--cyan {
+    background-color: #4ecdc4;
+}
+.bg--orange {
+    background-color: #f9a825;
+}
+.bg--blue {
+    background-color: #5e9cff;
+}
+.bg--purple {
+    background-color: #9b59b6;
+}
+.bg--green {
+    background-color: #7cb342;
+}
+
+/* Màu card border khi hover */
+.card.border--pink:hover {
+    border: 3px solid #ff6b6b;
+}
+.card.border--cyan:hover {
+    border: 3px solid #4ecdc4;
+}
+.card.border--orange:hover {
+    border: 3px solid #f9a825;
+}
+.card.border--blue:hover {
+    border: 3px solid #5e9cff;
+}
+.card.border--purple:hover {
+    border: 3px solid #9b59b6;
+}
+.card.border--green:hover {
+    border: 3px solid #7cb342;
+}
