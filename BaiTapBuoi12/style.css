@@ -15,7 +15,8 @@ body {
 /* Default style for card container and card */
 .cards-container {
     /* Giới hạn 1200px rộng cho nội dung khỏi tràn hết viewport */
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     margin: auto;
     padding: 40px;
     display: flex;
@@ -24,8 +25,14 @@ body {
     justify-content: center;
 }
 .card {
-    /* Tổng width cha chia 3 trừ 2 gap (20px x 2)*/
-    width: calc((100% - 40px) / 3);
+    /* Grow 0 tránh phình to bất thường và Shrink 1 cho phép co lại
+     khi màn hình nhỏ tránh vỡ layout*/
+    /* Width card = cha chia 3 trừ 2 gap (20px x 2)*/
+    flex: 0 1 calc((100% - 40px) / 3);
+    min-width: 300px;
+    /* Height set cứng 245px vì khi hover border từ 2px tăng lên 3px,
+     nếu để min-height trình duyệt sẽ tính toán lại kích thước và
+     làm xô lệch các card khác */
     height: 245px;
     padding: 30px;
     background-color: #ffffff;
@@ -70,6 +77,12 @@ body {
     line-height: 1.6;
     margin-bottom: 20px;
     margin-top: 12px;
+    /* Vì height của card set cứng là 245px nên giới hạn 3 dòng
+    tránh khi co giao diện bị nhảy xuống 4 dòng làm lệch nội dung. */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* Card link (learn more) */

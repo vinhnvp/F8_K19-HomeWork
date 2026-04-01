@@ -44,8 +44,10 @@ body {
 
 /* Style title block */
 .title-container {
-    width: 1200px;
-    margin: 24px auto;
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 12px;
 }
 h1 {
     font-size: 3.6rem;
@@ -61,7 +63,9 @@ h1 {
 
 /* Style cards block */
 .property-container {
-    width: 1200px;
+    max-width: 1200px;
+    padding: 12px;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -72,8 +76,12 @@ h1 {
     width: 350px;
     background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     overflow: hidden;
+    transition: box-shadow 0.15s ease-in;
+}
+.property:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 .property-head {
     height: 200px;
@@ -126,12 +134,19 @@ h1 {
 .badge-top--right {
     background-color: #34495e;
 }
+
+/* Badge giá */
 .badge-bottom--left {
     padding: 8px 20px;
     background-color: #16a085;
     font-size: 1.4rem;
     font-weight: 700;
+    transition: box-shadow .1s ease-in;
 }
+.badge-bottom--left:hover {
+    box-shadow: 0 4px 12px rgba(22, 160, 133, 0.4);
+}
+
 .badge-bottom--middle,
 .badge-bottom--right {
     width: 36px;
@@ -143,14 +158,43 @@ h1 {
     justify-content: center;
     align-items: center;
 }
+
+/* Share button */
 .badge-bottom--middle {
     color: #7f8c8d;
+    transition: background-color .1s ease-in-out, color .1s ease-in-out;
+    cursor: pointer;
 }
-.badge-bottom--right {
-    color: #e74c3c;
+.badge-bottom--middle:hover {
+    background-color: #3498db;
+    color: #ffffff;
 }
 
-/* Thông tin chi tiết (dưới ảnh) */
+
+/* Heart button */
+.badge-bottom--right {
+    color: #e74c3c;
+    cursor: pointer;
+    position: relative;
+    transition: background-color .1s ease-in-out;
+}
+.badge-bottom--right > span {
+    position: absolute;
+    margin: auto;
+}
+.badge-bottom--right > .hover-status {
+    opacity: 0;
+    color: #ffffff;
+    transition: opacity .1s ease-in-out;
+}
+.badge-bottom--right:hover {
+    background-color: #e74c3c;
+}
+.badge-bottom--right:hover > .hover-status {
+    opacity: 1;
+}
+
+    /* Thông tin chi tiết (dưới ảnh) */
 .property-details {
     padding: 18px;
 }
@@ -158,7 +202,7 @@ h1 {
     display: flex;
     gap: 8px;
     align-items: center;
-    margin: 8px 0 12px 0;
+    margin: 4px 0 12px 0;
 }
 .property-address > p,
 .property-address > span {
@@ -168,7 +212,7 @@ h1 {
 .property-name {
     font-weight: 600;
     color: #2c3e50;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 .property-info--top {
     display: flex;
@@ -204,7 +248,7 @@ h1 {
 
 .property-info--bottom {
     border-top: 1px solid #ecf0f1;
-    padding-top: 18px;
+    padding-top: 12px;
     display: flex;
     justify-content: flex-start;
     gap: 24px;
