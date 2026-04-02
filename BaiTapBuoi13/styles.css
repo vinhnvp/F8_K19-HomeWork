@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family: Helvetica, sans-serif;
+}
+
+/* Custom color từng strip */
+.color--forestgreen {
+    background-color: forestgreen;
+}
+.color--khaki {
+    background-color: khaki;
+}
+.color--dodgerblue {
+    background-color: dodgerblue;
+}
+.color--orange {
+    background-color: orange;
+}
+.color--violet {
+    background-color: violet;
+}
+
+/* Style default container, strip, image */
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+.strip {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    /* Đề bài không yêu cầu thêm transition,
+      thêm tạm để test tránh hover giật cục
+      gây khó chịu */
+    transition: width 0.25s;
+}
+.strip > span {
+    z-index: 20;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 900;
+}
+.container > .strip > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    z-index: 15;
+    /* Đề bài không yêu cầu thêm transition,
+     thêm tạm để test tránh hover giật cục
+     gây khó chịu */
+    transition: opacity 0.25s;
+}
+
+/* Overlay */
+.strip::after {
+    content:"";
+    height: 100%;
+    width: 100%;
+    /* Nền đen và mờ 10% */
+    background-color: #000000;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Default overlay ẩn */
+}
+
+/* Hover effects */
+.strip:hover {
+    width: 100%;
+}
+.strip:hover::after {
+    opacity: .1; /* Hover opacity 10% */
+}
+.strip:hover > img {
+    opacity: 1;
+}
+.strip:hover > span {
+    display: none;
+}
