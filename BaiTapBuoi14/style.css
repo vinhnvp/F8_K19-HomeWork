@@ -5,9 +5,11 @@
 }
 html {
     font-family: Arial;
+    font-size: 62.5%;
 }
 body {
     background-color: #e8e8e8;
+    font-size: 1.6rem;
 }
 
 
@@ -21,10 +23,7 @@ body {
     background-color: #3a3a3a;
 }
 .header__nav {
-    z-index: 1002;
-    /* Theo đề thì header nav có z-index là 1000 bé hơn index của logo,
-    ở giao diện mobile thì header bị logo chọc vào nên set lại lớn hơn để
-    khi sidebar hiển ra logo sẽ nằm dưới */
+    z-index: 1000;
 }
 .header__logo {
     position: relative;
@@ -40,7 +39,6 @@ body {
 }
 .nav__link {
     text-decoration: none;
-    font-size: 1.2rem;
     color: #ffffff;
 }
 
@@ -84,7 +82,7 @@ body {
 
 /* Container */
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
     padding: 1.5rem;
     display: flex;
@@ -124,15 +122,14 @@ body {
 
 .container__sidebar {
     width: 300px;
-    min-height: 200px;
+    min-height: 400px;
     background-color: #3a3a3a;
     padding: 1.2rem;
     flex-shrink: 0;
 }
 .sidebar__description {
     color: #ffffff;
-    font-size: 1rem;
-    line-height: 1.4rem;
+    line-height: 2rem;
 }
 
 
@@ -154,9 +151,9 @@ body {
         right: -300px;
         width: 300px;
         height: 100vh;
-        transition: right 0.3s ease;
+        transition: right 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
     }
-    #menu-toggle:checked ~ .header__nav {
+    #menu-toggle:checked ~ .header .header__nav {
         visibility: visible;
         opacity: 1;
         right: 0;
@@ -204,13 +201,14 @@ body {
     .container {
         flex-wrap: wrap;
         padding: 1rem;
+        flex-direction: column;
+    }
+    .site-heading {
+        font-size: 1.5rem;
     }
     .container__content,
     .container__sidebar {
         width: 100%;
-    }
-    .site-heading {
-        font-size: 1.5rem;
     }
     .container__sidebar {
         min-height: 0;
@@ -218,10 +216,10 @@ body {
     .card {
         width: 100%;
     }
-
     .header__nav {
         width: 280px;
         right: -280px;
+        padding: 2rem 1.5rem;
     }
 }
 
