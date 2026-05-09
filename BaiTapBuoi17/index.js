@@ -1,16 +1,15 @@
-// Bài 1: Viết một hàm isEvenNumber(number)
+// 1: Check even/odd number
 function isEvenNumber(number) {
-    let remainder = number % 2
-    return remainder === 0
+    return number % 2 === 0
 }
-console.log(isEvenNumber(10)); // Kết quả mong đợi: true
-console.log(isEvenNumber(7));  // Kết quả mong đợi: false
+console.log(isEvenNumber(10)); // Expectation: true
+console.log(isEvenNumber(7));  // Expectation: false
 
 
-// Bài 2: Tính tiền điện bậc thang
+// 2: Calculating electric fee
 function getElectricityBill(kwh) {
     if (typeof kwh !== 'number' || kwh < 0) {
-        return console.log('Vui lòng nhập số điện chính xác')
+        return false
     }
     const electricLv1 = 1678,
           electricLv2 = 1734,
@@ -40,15 +39,15 @@ function getElectricityBill(kwh) {
     }
     return electricFee
 }
-console.log(getElectricityBill(70)); // Mong đợi: (50 * 1678) + (20 * 1734) = 118580
-console.log(getElectricityBill(120)); // Mong đợi: (50 * 1678) + (50 * 1734) + (20 * 2014) = 210880
+console.log(getElectricityBill(70)); // Expectation: (50 * 1678) + (20 * 1734) = 118580
+console.log(getElectricityBill(120)); // Expectation: (50 * 1678) + (50 * 1734) + (20 * 2014) = 210880
 
 
-// Bài 3: Dọn dẹp dữ liệu tên người dùng (String)
+// 3: Clean name (String)
 function cleanName(name, keyword) {
     const cleanedName = name.trim().toLowerCase()
     const cleanedKeyword = keyword.toLowerCase()
     return cleanedName.includes(cleanedKeyword)
 }
-console.log(cleanName('   NGUYEN Van An   ', 'an')); // Mong đợi: true (vì 'nguyen van an' có chứa 'an')
-console.log(cleanName('   Tran Thi B ', 'hoang')); // Mong đợi: false
+console.log(cleanName('   NGUYEN Van An   ', 'an')); // Expectation: true ('nguyen van an' includes 'an')
+console.log(cleanName('   Tran Thi B ', 'hoang')); // Expectation: false
