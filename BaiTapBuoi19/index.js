@@ -28,29 +28,30 @@ const orders = [
     }
 ]
 
-// Hashmap total quantity with id
-const quantityMapper = {}
-for (let ordIdx = 0; ordIdx < orders.length; ordIdx++) {
-    const items = orders[ordIdx].items
-    for (let soldIdx = 0; soldIdx < items.length; soldIdx++) {
-        const item = items[soldIdx]
-        // If productId hasn't existed in quantityMapper --> Add new key + quantity
-        // If productId has existed in quantityMapper --> Add quantity
-        if (!quantityMapper[item.productId]) {
-            quantityMapper[item.productId] = item.quantity
-        } else {
-            quantityMapper[item.productId] = quantityMapper[item.productId] + item.quantity
-        }
-    }
-}
 
 const findTopRevenue = (productsArr, ordersArr) => {
+
+    // Hashmap total quantity with id
+    const quantityMapper = {}
+    for (let ordIdx = 0; ordIdx < ordersArr.length; ordIdx++) {
+        const items = ordersArr[ordIdx].items
+        for (let soldIdx = 0; soldIdx < items.length; soldIdx++) {
+            const item = items[soldIdx]
+            // If productId hasn't existed in quantityMapper --> Add new key + quantity
+            // If productId has existed in quantityMapper --> Add quantity
+            if (!quantityMapper[item.productId]) {
+                quantityMapper[item.productId] = item.quantity
+            } else {
+                quantityMapper[item.productId] = quantityMapper[item.productId] + item.quantity
+            }
+        }
+    }
 
     let topRevenue = 0
     let topProductNames = []
 
-    for (let productIdx = 0; productIdx < products.length; productIdx++) {
-        const product = products[productIdx]
+    for (let productIdx = 0; productIdx < productsArr.length; productIdx++) {
+        const product = productsArr[productIdx]
 
         // Get total sold quantity from quantityMapper
         // If an id exists in "products" but doesn't exit in "quantityMapper" --> totalSold = 0
