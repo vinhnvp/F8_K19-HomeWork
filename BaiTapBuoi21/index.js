@@ -13,6 +13,7 @@ const orders = [
     { orderId: 'ORD05', productId: 2, quantity: 1, status: 'completed' }
 ];
 
+
 const completedOrderDetails = orders
     .filter((order) => order.status === 'completed')
     .map((order) => {
