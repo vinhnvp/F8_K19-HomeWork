@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Hoá đơn bán hàng</title>
+</head>
+<body>
+    <div class="receipt-container">
+        <!-- Header -->
+        <header id="receipt-header">
+            <div class="header-l-col">
+                <div class="header-l-col_store">
+                    <div class="header-l-col_store-logo"><p>WN</p></div>
+                    <h1 class="header-l-col_store-name store-name"></h1>
+                </div>
+                <p>Chung cấp sản phẩm thời trang cao cấp & thiết kế độc quyền</p>
+            </div>
+        
+            <div class="header-r-col">
+                <p class="header-r-col_title">Hoá đơn bán lẻ</p>
+                <span class="header-r-col_receipt-id"> 
+                    <p>Mã số: <span id="receipt-id"></span></p>
+                </span>
+                <span class="header-r-col_date"> 
+                    <p>Ngày bán: <span id="receipt-date"></span></p>
+                </span>
+            </div>
+        </header>
+
+        <main id="receipt-details">
+            <div class="seller-and-buyer-details">
+                <div class="receipt-seller-details">
+                    <p class="receipt-seller-details_title">Đơn vị bán hàng (Seller)</p>
+                    <p class="receipt-seller-details_name store-name"></p>
+                    <p class="receipt-seller-details_address">
+                        <span class="mdi mdi-map-marker-outline mr-4"></span>
+                        <span class="receipt-seller-details_address-text"></span>
+                    </p>
+                    <p class="receipt-seller-details_phone">
+                        <span class="mdi mdi-phone-outline mr-4"></span>
+                        <span class="receipt-seller-details_phone-nums"></span>
+                    </p>
+                </div>
+
+                <div class="receipt-buyer-details">
+                    <p class="receipt-buyer-details_title">Khách hàng (Buyer)</p>
+                    <p class="receipt-buyer-details_name"></p>
+                    <p class="receipt-buyer-details_age">Tuổi:</p>
+                    <p class="receipt-buyer-details_address">
+                        <span class="mdi mdi-city-variant-outline mr-4"></span>
+                        <span class="receipt-buyer-details_address-text"></span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Products Table -->
+            <div class="products">
+                <table class="products-details">
+                    <colgroup>
+                        <col class="col-stt">
+                        <col class="col-name">
+                        <col class="col-size">
+                        <col class="col-qty">
+                        <col class="col-price">
+                        <col class="col-total">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Size</th>
+                            <th>SL</th>
+                            <th>Đơn giá</th>
+                            <th>Thành tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody class="products-details_items">
+
+                    </tbody>
+                    <tfoot class="products-sum">
+                        <tr>
+                            <td colspan="4">
+                                <div class="products-sum_promo">
+                                    <span class="mdi mdi-sale"></span>
+                                    <div>
+                                        <p class="products-sum_promo-title">KHUYẾN MÃI / TRỢ GIÁ</p>
+                                        <p class="products-sum_promo-program"></p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td colspan="2" class="products-sum_details">
+                                <div class="products-sum_details-total">
+                                    <p>Cộng tiền hàng:</p>
+                                    <p class="products-sum_details-total-value"></p>
+                                </div>
+                                <div class="products-sum_details-promo">
+                                    <p>Khấu trừ giảm giá:</p>
+                                    <p class="products-sum_details-promo-value"></p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td colspan="2">
+                                <div class="products-sum_total">
+                                    <p>Tổng thanh toán:</p>
+                                    <p class="products-sum_total-value"></p>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            
+
+        </main>
+
+    </div>
+    
+    <script src="./index.js"></script>
+</body>
+</html>
