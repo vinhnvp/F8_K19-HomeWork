@@ -256,7 +256,7 @@ const sortEmployeesByRevenue = (ordersList) => {
         const left = []
         const right = []
 
-        for (let i = 0; i < arr.length - 1; i++) {
+        for (let i = 0; i < arr.length; i++) {
             if (i === mid) continue
             if (arr[i].totalRevenue > pivot.totalRevenue) {
                 left.push(arr[i])
