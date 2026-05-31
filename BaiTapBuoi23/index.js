@@ -5,14 +5,12 @@ const meta = {
     paymentMethod: "Cash"
   }
 
-
 const seller = {
     name: "WinMark 2 Hai Bà Trưng",
     address: "2 Bà Trưng - Hoàn Kiếm - HN",
     phone: "012345678",
     representative: "Đại diện WinMark"
   }
-
 
 const customer = {
     name: "Nguyễn Văn A",
@@ -96,7 +94,6 @@ const fillProductDetails = (products,promotions) => {
     const totalPayable = document.querySelector(".products-sum_total-value")
     let accumulate = 0
 
-
     if (products.length > 0) {
         const rowsHTML = products.map(product => {
             const totalPrice = product.price * product.quantity
@@ -113,7 +110,6 @@ const fillProductDetails = (products,promotions) => {
         productDetails.innerHTML = rowsHTML
         totalValue.innerText = formatMoney(accumulate)
     }
-
 
     if (promotions) {
         const discountValue = promotions.discountPercent / 100 * accumulate

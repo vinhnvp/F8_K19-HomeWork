@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Sản phẩm</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+</head>
+<body class="bg-surface">
+    <header class="bg-white px-8 pt-6 pb-4">
+        <div class="max-w-main m-auto flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold text-primary flex items-center">
+                <span class="mdi mdi-cart-outline text-3xl text-primary"></span>
+                FakeStore
+            </a>
+            <!-- Seach Box -->
+            <div class="w-[36vw] relative">
+                <label for="products-searchbox" class="absolute top-1.5 left-4">
+                    <span class="mdi mdi-magnify text-2xl text-[#b3becd]"></span>
+                </label>
+                <input type="search" name="" id="products-searchbox" placeholder="Tìm kiếm sản phẩm..."
+                class="w-full py-2 pl-12 pr-2 bg-surface border border-light-grey focus:border-primary focus:shadow-blue transition-shadow duration-200 rounded-full outline-none">
+            </div>
+            <!-- Cart -->
+            <button class="relative">
+                <span class="cart-badge absolute -top-3 -right-2 px-2 bg-[#ee4646] text-white text-sm font-medium rounded-xl"></span>
+                <span class="mdi mdi-cart-outline text-2xl text-[#6d7b90]"></span>
+            </button>
+        </div>
+        
+    </header>
+
+    <div class="grid grid-cols-12 gap-8 items-start max-w-main mx-auto py-8">
+        <aside class="col-span-3 bg-white p-4 rounded-xl shadow-soft border border-surface">
+            <div>
+                <h2 class="text-2xl font-bold mb-4">
+                    <span class="mdi mdi-filter-multiple-outline"></span>
+                    Danh mục
+                </h2>
+                <ul class="product-categories flex flex-col font-medium gap-2">
+                    <!--
+                    <li class="flex justify-between py-2 px-4 rounded-xl text-primary bg-accent cursor-pointer">
+                        Tất cả sản phẩm
+                    </li>
+                    <li class="flex justify-between py-2 px-4 rounded-xl text-grey hover:text-primary transition-text duration-200 cursor-pointer">
+                        Men's Clothing
+                        <span class="px-1.5 rounded-full bg-primary-50">4</span>
+                    </li>
+                    <li class="flex justify-between py-2 px-4 rounded-xl text-grey hover:text-primary transition-text duration-200 cursor-pointer">
+                        Women's Clothing
+                        <span class="px-1.5 rounded-full bg-primary-50">4</span>
+                    </li>
+                    <li class="flex justify-between py-2 px-4 rounded-xl text-grey hover:text-primary transition-text duration-200 cursor-pointer">
+                        Jewelry
+                        <span class="px-1.5 rounded-full bg-primary-50">2</span>
+                    </li>
+                    <li class="flex justify-between py-2 px-4 rounded-xl text-grey hover:text-primary transition-text duration-200 cursor-pointer">
+                        Electronics
+                        <span class="px-1.5 rounded-full bg-primary-50">2</span>
+                    </li>
+                    -->
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Product list -->
+        <main class="col-span-9">
+            <div>
+                <h2 class="category-name font-bold text-2xl text-dark capitalize">Tất cả sản phẩm</h2>
+                <p class="text-grey">Hiển thị <span class="category-quantity">20</span> sản phẩm</p>
+            </div>
+
+            <div class="product-list flex gap-4 flex-wrap mt-4">
+                <!--
+                <a href="#" class="w-[calc((100%-32px)/3)] h-auto bg-white p-4 shadow-soft rounded-2xl border border-accent hover:shadow-blue transition-shadow duration-200">
+                    <div class="w-[80%] h-[250px] m-auto mb-4">
+                        <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png" alt="Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops" class="w-full h-full object-contain">
+                    </div>
+                    <h3 class="font-semibold">
+                        Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
+                    </h3>
+                    <div class="py-2 border-b">
+                        <span class="mdi mdi-star text-yellow-500 text-lg"></span>
+                        <span class="font-semibold text-dark">3.9</span>
+                        <span class="text-grey">(120)</span>
+                    </div>
+                    <div class="pt-4 flex items-center justify-between">
+                        <span class="text-xl font-bold text-primary">$109.95</span>
+                        <button class="w-10 h-10 bg-dark rounded-xl hover:bg-primary transition-bg duration-200">
+                            <span class="mdi mdi-cart-outline text-white text-xl"></span>
+                        </button>
+                    </div>
+                </a>
+                -->
+
+
+
+            </div>
+        </main>
+    </div>
+
+    
+    <script src="index.js"></script>
+</body>
+</html>
