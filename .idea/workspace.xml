@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc84eb6c-0f44-4fdd-a446-5b279962d721" name="Changes" comment="">
+    <list default="true" id="fc84eb6c-0f44-4fdd-a446-5b279962d721" name="Changes" comment="Create homework 32 - Init structure">
+      <change afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Services/Product/type.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Product/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Product/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Product/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Product/type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaiTapBuoi32/src/Services/ProductService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Services/Product/ProductService.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,12 +32,12 @@
     &quot;assignee&quot;: &quot;vinhnvp&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:vinhnvp/F8_K19-HomeWork.git&quot;,
-    &quot;accountId&quot;: &quot;1010ac6b-c86b-4df6-9f2e-55419c6a129c&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/vinhnvp/F8_K19-HomeWork.git",
+    "accountId": "52aa9452-17ac-4cff-8a50-767e08fcc4ee"
   }
-}</component>
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -81,6 +85,7 @@
       <recent name="F:\Projects\F8_K19-HomeWork\BaiTapBuoi32\src\Models\Customer" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Projects\F8_K19-HomeWork\BaiTapBuoi32\src\Services\Product" />
       <recent name="$PROJECT_DIR$/BaiTapBuoi6" />
       <recent name="$PROJECT_DIR$/BaiTapBuoi3" />
     </key>
@@ -107,6 +112,15 @@
       <workItem from="1770348548133" duration="3148000" />
       <workItem from="1772535172321" duration="3095000" />
     </task>
+    <task id="LOCAL-00001" summary="Create homework 32 - Init structure">
+      <option name="closed" value="true" />
+      <created>1783480629314</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1783480629314</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,5 +136,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Create homework 32 - Init structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create homework 32 - Init structure" />
   </component>
 </project>

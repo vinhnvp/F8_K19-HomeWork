@@ -21,4 +21,7 @@ export class Product implements ProductI {
     decreaseStock(quantity: number): void {
         this.stock -= quantity
     }
+    toString() {
+        return `id: ${this.id}, name: ${this.name}, price: ${this.price}, stock: ${this.stock}`
+    }
 }
