@@ -15,6 +15,11 @@ export class Customer implements CustomerI {
         this.address = address
     }
 
+    getId(): string {return this.id}
+    getName(): string {return this.name}
+    getPhone(): string {return this.phone}
+    getAddress(): string {return this.address}
+
     updatePhone(phone: string): void {
         this.phone = phone
     }

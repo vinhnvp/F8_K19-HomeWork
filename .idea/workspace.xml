@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc84eb6c-0f44-4fdd-a446-5b279962d721" name="Changes" comment="Create homework 32 - Init structure">
-      <change afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Services/Product/type.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Order/order_item.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Customer/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Customer/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Customer/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Customer/type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Order/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Order/order.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Order/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Order/type.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Product/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Product/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Product/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Product/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaiTapBuoi32/src/Services/ProductService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Services/Product/ProductService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaiTapBuoi32/src/Services/Product/ProductService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Services/Product/ProductService.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +36,12 @@
     &quot;assignee&quot;: &quot;vinhnvp&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/vinhnvp/F8_K19-HomeWork.git",
-    "accountId": "52aa9452-17ac-4cff-8a50-767e08fcc4ee"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/vinhnvp/F8_K19-HomeWork.git&quot;,
+    &quot;accountId&quot;: &quot;52aa9452-17ac-4cff-8a50-767e08fcc4ee&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -73,9 +77,9 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "settings.typescriptcompiler",
     "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "F:\\Projects\\F8_K19-HomeWork\\BaiTapBuoi32\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "/snap/intellij-idea/98/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -93,8 +97,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.26222.65" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.26222.65" />
       </set>
     </attachedChunks>
   </component>
@@ -140,5 +144,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create homework 32 - Init structure" />
     <option name="LAST_COMMIT_MESSAGE" value="Create homework 32 - Init structure" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -8,7 +8,12 @@ export class ProductService implements ProductServiceI {
         this.products.push(product)
     }
     updateProduct(id: number, data: {}): void {
-        throw new Error("Method not implemented.");
+        const shouldUpdate = this.products.find(product => product.toString().includes(id))
+        if (data.name) {
+            shouldUpdate.name = data.name
+        } else {
+
+        }
     }
     deleteProduct(id: string): void {
         throw new Error("Method not implemented.");
