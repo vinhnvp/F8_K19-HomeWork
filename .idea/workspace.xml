@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc84eb6c-0f44-4fdd-a446-5b279962d721" name="Changes" comment="Create homework 32 - Init structure">
+    <list default="true" id="fc84eb6c-0f44-4fdd-a446-5b279962d721" name="Changes" comment="Update homework 32 (Customer service + Order service)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Customer/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Customer/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Customer/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Customer/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Order/order.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Order/order.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Order/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Models/Order/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaiTapBuoi32/src/Services/CustomerService/CustomerService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Services/CustomerService/CustomerService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaiTapBuoi32/src/Services/CustomerService/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Services/CustomerService/type.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BaiTapBuoi32/src/Services/OrderService/OrderService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Services/OrderService/OrderService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaiTapBuoi32/src/Services/OrderService/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Services/OrderService/type.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BaiTapBuoi32/src/Services/ProductService/ProductService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Services/ProductService/ProductService.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BaiTapBuoi32/src/Services/ProductService/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/Services/ProductService/type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaiTapBuoi32/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapBuoi32/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783480629314</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update homework 32 (Customer service + Order service)">
+      <option name="closed" value="true" />
+      <created>1783567319348</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1783567319348</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +147,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create homework 32 - Init structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create homework 32 - Init structure" />
+    <MESSAGE value="Update homework 32 (Customer service + Order service)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update homework 32 (Customer service + Order service)" />
   </component>
 </project>

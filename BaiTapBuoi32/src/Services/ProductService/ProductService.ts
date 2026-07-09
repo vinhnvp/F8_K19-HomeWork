@@ -10,7 +10,7 @@ export class ProductService implements ProductServiceI {
     deleteProduct(id: string): void {
         throw new Error("Method not implemented.");
     }
-    updateProduct(id: number, data: {name?:string; price?:number; stock?:number}): void {
+    updateProduct(id: string, data: {name?:string; price?:number; stock?:number}): void {
         const product = this.products.find(product => product.toString().includes(String(id)))
         if (product) {
             if (data.name !== undefined) product.setName(data.name)

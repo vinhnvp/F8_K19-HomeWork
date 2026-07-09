@@ -10,7 +10,7 @@ export class OrderService implements OrderServiceI {
     private orders : Order[] = []
     private productService: ProductService
 
-    constructor(productService: ProductService, customerService: CustomerService) {
+    constructor(productService: ProductService) {
         this.productService = productService
     }
 
