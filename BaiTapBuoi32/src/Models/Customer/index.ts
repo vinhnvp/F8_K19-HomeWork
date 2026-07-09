@@ -20,6 +20,9 @@ export class Customer implements CustomerI {
     getPhone(): string {return this.phone}
     getAddress(): string {return this.address}
 
+    updateName(name: string): void {
+        this.name = name
+    }
     updatePhone(phone: string): void {
         this.phone = phone
     }

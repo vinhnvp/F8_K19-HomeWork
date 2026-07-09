@@ -1,10 +1,10 @@
-import {OrderStatus, OrderI} from "./type.ts"
+import {OrderStatus, OrderI} from "./type"
 import {Customer} from "../Customer"
-import {OrderItem} from "../Order"
+import {OrderItem} from "./order_item"
 // @ts-ignore
 import {v7} from "uuid"
 
-class Order implements OrderI {
+export class Order implements OrderI {
     private id: string
     private customer: Customer
     private items: OrderItem[]
@@ -20,7 +20,7 @@ class Order implements OrderI {
     }
 
     getId(): string {return this.id}
-    getCustomer(): string {return this.customer}
+    getCustomer(): Customer {return this.customer}
     getCreatedAt(): Date {return this.createdAt}
     getItems(): OrderItem[] {return this.items}
     getStatus(): OrderStatus {return this.status}

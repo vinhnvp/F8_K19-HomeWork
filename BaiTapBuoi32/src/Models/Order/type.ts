@@ -1,3 +1,7 @@
+import {Customer} from "../Customer"
+import {OrderItem} from "./order_item"
+import {Product} from "../Product"
+
 export interface OrderItemI {
     getProduct(): Product
     getQuantity(): number
@@ -8,12 +12,12 @@ export interface OrderItemI {
 export enum OrderStatus {
     NEW = "NEW",
     PAID = "PAID",
-    CANCELED = "CANCELED"
+    CANCELLED = "CANCELLED"
 }
 
 export interface OrderI {
     getId(): string
-    getCustomer(): string
+    getCustomer(): Customer
     getItems(): OrderItem[]
     getCreatedAt(): Date
     getStatus(): OrderStatus
